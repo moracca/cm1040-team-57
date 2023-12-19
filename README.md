@@ -1,1 +1,10 @@
 # cm1040-team-57
+
+## Theme Park Website (Coursework 1.1)
+
+Members:
+- LANNAR DEAN
+- ANA-MARIA FOTACHE-VORNICU
+- YASHAR JANPARVAR JAVDANI
+- HAMNA QURESHI
+- BONNO TSAATSELA
