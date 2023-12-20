@@ -8,13 +8,15 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  padding-bottom: 160px;
   background-color: #f0f0f0;
   background-image: url(../images/tunnel.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: #FFF;
+  /* set display to flex so we can grow our main content and keep our footer "sticky" */
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -42,6 +44,8 @@ nav ul li a {
   padding-bottom: 10px
 }
 
+/* Add an underline effect to the nav links, which is normally hidden (with
+   transform: scaleX(0)) but grows to the width of the link when hovered */
 nav ul li a::after {
   content: '';
   background-color: #35e2f6;
@@ -50,13 +54,25 @@ nav ul li a::after {
   position: absolute;
   bottom: 0;
   left: 0;
+  /* hide this effect under normal circumstances */
   transform: scaleX(0);
   text-decoration: underline;
   transform-origin: bottom center;
+  /* animate the transition */
   transition: transform 0.2s ease-out;
 }
 nav ul li a:hover::after { 
+  /* on hover grow the underline effect to the width of the link */
   transform: scaleX(1);
+}
+nav ul li:not(:last-of-type) {
+  border-right: 1px solid #FFF;
+  padding-right: 25px;
+}
+
+main {
+  /* allow content to grow to take up available space */
+  flex:  1;
 }
 
 section {
@@ -72,9 +88,9 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top: 30px;
 }
 
 
