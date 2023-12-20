@@ -3,8 +3,8 @@
 ## Theme Park Website (Coursework 1.1)
 
 Members:
-- LANNAR DEAN
-- ANA-MARIA FOTACHE-VORNICU
-- YASHAR JANPARVAR JAVDANI
-- HAMNA QURESHI
-- BONNO TSAATSELA
+- LANNAR DEAN (Offers & Rides page)
+- ANA-MARIA FOTACHE-VORNICU (Explore the Rides page)
+- YASHAR JANPARVAR JAVDANI (Home page)
+- HAMNA QURESHI (extra 4th page)
+- BONNO TSAATSELA (M.I.A.)

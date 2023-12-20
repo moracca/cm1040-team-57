@@ -1,8 +1,4 @@
-/* restrict the image to the width of its container */
-#packages img {
-    max-width: 100%;
-    border-radius: 6px;
-}
+
 /* animate the transition so it will grow and shrink gradually */
 #packages .col * {
     transition: transform 0.3s ease-in-out;
@@ -10,6 +6,9 @@
 /* when hovering over a package, grow all of its contents slightly */
 #packages .col:hover * {
     transform: scale(1.1);
+}
+#packages .col-1-3:hover * {
+    transform: scale(1.05);
 }
 
 /* container for the overlap spans which cover the bottom 48px of this container
@@ -29,11 +28,7 @@ span.overlay {
     border-radius: 0px 0px 6px 6px;
     font-size: 48px;
 }
-#offers img {
-    max-width: 100%;
-    border-radius: 6px;
-    display: block;
-}
+
 .offer {
     margin: 24px 0px;
 }
@@ -45,15 +40,10 @@ span.overlay {
 
 /* The buttons in the packages section */
 a.price {
-    display: block;
-    width: 100%;
-    height: 48px;
-    font-size: 32px;
-    line-height: 48px;
-    text-decoration: none;
-    color: #FFF;
     background-color: #73d88d;
-    border-radius: 6px;
+}
+a.price:hover {
+    background-color: #165727;
 }
 /* smaller text indicating prices start at these values but can go higher */
 .starting_at {

@@ -93,6 +93,12 @@ footer {
   margin-top: 30px;
 }
 
+/* restrict the images to the width of their container */
+img {
+    max-width: 100%;
+    border-radius: 6px;
+    display: block;
+}
 
 .social-links a {
   color: #FFF;
@@ -102,6 +108,40 @@ footer {
   margin: 0px 3px;
 }
 
+.btn {
+  display: block;
+  width: 100%;
+  height: 48px;
+  font-size: 32px;
+  line-height: 48px;
+  text-decoration: none;
+  color: #FFF;
+  background-color: rgb(47 163 77 / 53%);
+  border-radius: 6px;
+  transition: transform 0.3s ease-in-out, background-color 0.2s ease-in-out !important;
+}
+.btn:hover {
+  background-color: rgb(47 163 77 / 100%);
+}
+
+
+
+#popular_rides img {
+  margin: auto;
+}
+
+/* a review from a guest, intended to take up full container width */
+.review {
+  background-color: #051a2f;
+  padding: 20px 20px 0px 20px;
+  margin: 10px 0px;
+  border-radius: 6px;
+}
+.review h4 {
+  background-color: #185671;
+  padding: 12px 0px;
+  border-radius: 6px;
+}
 
 /* These styles are rougly taken from Bootstrap v5, but are modified to make
    the container a bit wider than bootstrap normally uses */
