@@ -1,9 +1,14 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  padding-bottom: 70px;
+  padding-bottom: 160px;
   background-color: #f0f0f0;
   background-image: url(../images/tunnel.png);
   background-size: cover;
@@ -72,6 +77,18 @@ footer {
   width: 100%;
 }
 
+
+.social-links a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0px 3px;
+}
+
+
+/* These styles are rougly taken from Bootstrap v5, but are modified to make
+   the container a bit wider than bootstrap normally uses */
 .container, .container-fluid {
     width: 100%;
     padding-right: 50px;
@@ -104,4 +121,55 @@ footer {
   .container {
     max-width: 1320px;
   }
+}
+
+
+:root {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.row .col-1-3 {
+    width: 33.3%;
+}
+
+.row .col-2-3 {
+    width: 66.6%;
+}
+
+.row .col-1-2 {
+    width: 50%;
+}
+
+.row .col-1-4 {
+    width: 25%;
+}
+
+.row .col-3-4 {
+    width: 75%;
+}
+
+.fab, .fa-brands {
+  font-family: var(--fa-style-family-brands);
+}
+.fa,.fa-brands,.fa-classic,.fa-duotone,.fa-light,.fa-regular,.fa-sharp,.fa-sharp-solid,.fa-solid,.fa-thin,.fab,.fad,.fal,.far,.fas,.fasl,.fasr,.fass,.fast,.fat {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto
 }
