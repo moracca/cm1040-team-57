@@ -5,7 +5,6 @@
 body {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -14,9 +13,37 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   color: #FFF;
-  /* set display to flex so we can grow our main content and keep our footer "sticky" */
+  /* 
+    set display to flex so we can grow our main content and keep our footer "sticky".
+    This strategy was based on chat interaction with ChatGPT 4.0 on Dec 18.
+    Prompt:
+      how can I make my footer stick to the bottom of the page if the page
+      content is short, but keep the footer below all content when the page is
+      long, even if I have to scroll to see the footer?
+    Response Explanation:
+      - The body is set to a flex container with a vertical direction.
+      - The .content-wrap is given flex: 1, which allows it to grow and take up
+        any available space, pushing the footer down.
+      - The .footer will stick to the bottom when the content is short because of
+        the min-height: 100vh on the body, making sure the body takes at least 100%
+        of the viewport height.
+      - On longer pages, the content will naturally push the footer down, and it
+        will no longer stick to the bottom of the viewport but will be at the end
+        of the content as usual.
+      This solution is widely supported across modern browsers and provides a
+      clean way to have a footer behave dynamically based on the length of the
+      content.
+
+    This was then adapted to fit our elements (ie main instead of .content-wrap)
+  */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  /* allow content to grow to take up available space. */
+  flex:  1;
 }
 
 header {
@@ -68,11 +95,6 @@ nav ul li a:hover::after {
 nav ul li:not(:last-of-type) {
   border-right: 1px solid #FFF;
   padding-right: 25px;
-}
-
-main {
-  /* allow content to grow to take up available space */
-  flex:  1;
 }
 
 section {
