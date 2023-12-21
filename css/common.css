@@ -51,6 +51,14 @@ header {
   color: white;
   padding: 20px 0;
 }
+img#navLogo {
+  transition: max-height 0.6s;
+  max-height: 700px;
+  margin: auto;
+}
+img#navLogo.smaller {
+  max-height: 100px;
+}
 
 nav ul {
   list-style-type: none;
