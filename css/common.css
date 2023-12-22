@@ -149,7 +149,7 @@ img {
 
 
 #popular_rides img {
-  margin: auto;
+  width: 100%;
 }
 
 /* a review from a guest, intended to take up full container width */
