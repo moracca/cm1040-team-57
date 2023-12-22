@@ -1,0 +1,28 @@
+/* make all children of rides element to have display flex and align text and button to start */
+#rides .col * {
+  display: flex;
+  /* horizontal alignment */
+  justify-content: flex-start;
+  /* vertical alignment */
+  align-items: flex-start;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+/* specify btn-medium is a block element so text can be alligned in the center */
+#rides .btn-medium {
+  display: block;
+  text-align: center;
+}
+
+/* lower the brightness of the images and set transition to 1 second */
+#rides img {
+  filter: brightness(80%);
+  transition-duration: 0.5s;
+}
+
+/* when hovering over an image brightness will go to 100% and image will be bigger in 1 second */
+#rides img:hover {
+  filter: brightness(100%);
+  transform: scale(1.05);
+}
