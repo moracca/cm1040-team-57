@@ -34,7 +34,7 @@ span.overlay {
 }
 /* put a bottom border and padding below all offers except the last one */
 .offer:not(:last-of-type) {
-    border-bottom: 2px solid #FFF;
+    /* border-bottom: 2px solid #FFF; */
     padding-bottom: 20px;
 }
 

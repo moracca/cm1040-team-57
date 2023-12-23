@@ -83,15 +83,21 @@ nav ul li a::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* hide this effect under normal circumstances */
-  transform: scaleX(0);
   text-decoration: underline;
+  /* hide this effect under normal circumstances */
+  -webkit-transform: scaleX(0);
+  -webkit-transform-origin: bottom center;
+  -moz-transform: scaleX(0);
+  -moz-transform-origin: bottom center;
+  transform: scaleX(0);
   transform-origin: bottom center;
   /* animate the transition */
   transition: transform 0.2s ease-out;
 }
 nav ul li a:hover::after {
   /* on hover grow the underline effect to the width of the link */
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
   transform: scaleX(1);
 }
 nav ul li:not(:last-of-type) {
@@ -138,10 +144,77 @@ img {
   margin: 0px 3px;
 }
 
+
+.margin-auto {
+  margin: auto;
+}
+.mt-1 {
+  margin-top: 10px;
+}
+.mt-2 {
+  margin-top: 20px;
+}
+.mt-3 {
+  margin-top: 30px;
+}
+.mt-4 {
+  margin-top: 40px;
+}
+.mt-5 {
+  margin-top: 50px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.trident-divider {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
+/* a class that will cause an element to be displayed flipped (mirror image) */
+.flipped {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.trident {
+  display: inline-block;
+  height: 115px;
+}
+/*
+  Trident vector image obtained from Vecteezy (https://www.vecteezy.com/vector-art/3381271-trident-vector-logo-icon-illustration-sign-symbol),
+  then split into 3 files to allow its size to dynamically adapt to its container
+  by growing the middle part using flex: 1, while keeping the left and right
+  sides at their same size  
+*/
+.trident-left {
+  background-image: url(/images/trident-left-01.svg);
+  background-repeat: no-repeat;
+  width: 82px;
+}
+.trident-middle {
+  background-image: url(/images/trident-middle-01.svg);
+  /* don't se a width on this element, instead allow it to grow to fill the
+     available space */
+  flex: 1;
+  /* repeat the background on the x axis so we can tile the middle section of
+     the trident regardless of how big the container is */
+  background-repeat: repeat-x;
+}
+.trident-right {
+  background-image: url(/images/trident-right-01.svg);
+  background-repeat: no-repeat;
+  width: 199px;
+}
+
 .btn,
 .btn-medium {
   display: block;
   width: 100%;
+  max-width: 400px;
   height: 48px;
   font-size: 32px;
   line-height: 48px;
