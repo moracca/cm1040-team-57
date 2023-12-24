@@ -1,0 +1,59 @@
+/* the rides-list is a grid that on bigger screens has 3 columns, each takking up one frame of the available space for them */
+.rides-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+/* make all elements with class col that are found in the rides element to have display flex and align text and button to start */
+.ride {
+  display: flex;
+  flex-wrap: wrap;
+  /* the direction in which the elements inside the flex container are stacked */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: start;
+  width: 100%;
+  height: 100%;
+}
+
+.ride-title {
+  /* title of the ride has 5px margin for top and bottom and 0 on the sides */
+  margin: 5px 0;
+}
+
+.ride-description {
+  /* set description margins to 10px for bottom and 0 for the rest for better visibility */
+  margin: 0 0 10px 0;
+}
+
+/* specify btn-medium is a block element so text can be alligned in the center */
+#rides .btn-medium {
+  display: block;
+  text-align: center;
+}
+
+/* lower the brightness of the images and set transition to 1 second */
+#rides img {
+  filter: brightness(80%);
+  transition-duration: 0.5s;
+}
+
+/* when hovering over an image brightness will go to 100% and image will be bigger in 1 second */
+#rides img:hover {
+  filter: brightness(100%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .rides-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ride-title {
+    font-size: 20px;
+  }
+  .ride-description {
+    font-size: 15px;
+  }
+}

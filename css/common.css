@@ -1,11 +1,12 @@
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 20px;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
@@ -13,10 +14,38 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #FFF;
-  /* set display to flex so we can grow our main content and keep our footer "sticky" */
+  color: #fff;
+  /* 
+    set display to flex so we can grow our main content and keep our footer "sticky".
+    This strategy was based on chat interaction with ChatGPT 4.0 on Dec 18.
+    Prompt:
+      how can I make my footer stick to the bottom of the page if the page
+      content is short, but keep the footer below all content when the page is
+      long, even if I have to scroll to see the footer?
+    Response Explanation:
+      - The body is set to a flex container with a vertical direction.
+      - The .content-wrap is given flex: 1, which allows it to grow and take up
+        any available space, pushing the footer down.
+      - The .footer will stick to the bottom when the content is short because of
+        the min-height: 100vh on the body, making sure the body takes at least 100%
+        of the viewport height.
+      - On longer pages, the content will naturally push the footer down, and it
+        will no longer stick to the bottom of the viewport but will be at the end
+        of the content as usual.
+      This solution is widely supported across modern browsers and provides a
+      clean way to have a footer behave dynamically based on the length of the
+      content.
+
+    This was then adapted to fit our elements (ie main instead of .content-wrap)
+  */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  /* allow content to grow to take up available space. */
+  flex: 1;
 }
 
 header {
@@ -47,47 +76,54 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 44px;
+  font-size: 28px;
   position: relative;
-  padding-bottom: 10px
+  padding-bottom: 10px;
 }
 
 /* Add an underline effect to the nav links, which is normally hidden (with
    transform: scaleX(0)) but grows to the width of the link when hovered */
 nav ul li a::after {
-  content: '';
+  content: "";
   background-color: #35e2f6;
   height: 10px;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  /* hide this effect under normal circumstances */
-  transform: scaleX(0);
   text-decoration: underline;
+  /* hide this effect under normal circumstances */
+  -webkit-transform: scaleX(0);
+  -webkit-transform-origin: bottom center;
+  -moz-transform: scaleX(0);
+  -moz-transform-origin: bottom center;
+  transform: scaleX(0);
   transform-origin: bottom center;
   /* animate the transition */
   transition: transform 0.2s ease-out;
 }
-nav ul li a:hover::after { 
+nav ul li a:hover::after {
   /* on hover grow the underline effect to the width of the link */
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
   transform: scaleX(1);
 }
 nav ul li:not(:last-of-type) {
-  border-right: 1px solid #FFF;
+  border-right: 1px solid #fff;
   padding-right: 25px;
 }
 
-main {
-  /* allow content to grow to take up available space */
-  flex:  1;
+@media (max-width: 992px) {
+  nav ul li a {
+    font-size: 20px;
+  }
 }
 
 section {
   padding: 20px;
   text-align: center;
   background-color: rgba(5, 49, 107, 0.7);
-  margin:  20px 0px;
+  margin: 20px 0px;
   border-radius: 20px;
 }
 
@@ -103,39 +139,117 @@ footer {
 
 /* restrict the images to the width of their container */
 img {
-    max-width: 100%;
-    border-radius: 6px;
-    display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
 }
 
 .social-links a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-size: 32px;
   display: inline-block;
   margin: 0px 3px;
 }
 
-.btn {
+
+.margin-auto {
+  margin: auto;
+}
+.mt-1 {
+  margin-top: 10px;
+}
+.mt-2 {
+  margin-top: 20px;
+}
+.mt-3 {
+  margin-top: 30px;
+}
+.mt-4 {
+  margin-top: 40px;
+}
+.mt-5 {
+  margin-top: 50px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.trident-divider {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
+/* a class that will cause an element to be displayed flipped (mirror image) */
+.flipped {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.trident {
+  display: inline-block;
+  height: 115px;
+}
+/*
+  Trident vector image obtained from Vecteezy (https://www.vecteezy.com/vector-art/3381271-trident-vector-logo-icon-illustration-sign-symbol),
+  then split into 3 files to allow its size to dynamically adapt to its container
+  by growing the middle part using flex: 1, while keeping the left and right
+  sides at their same size  
+*/
+.trident-left {
+  background-image: url(/images/trident-left-01.svg);
+  background-repeat: no-repeat;
+  width: 82px;
+}
+.trident-middle {
+  background-image: url(/images/trident-middle-01.svg);
+  /* don't se a width on this element, instead allow it to grow to fill the
+     available space */
+  flex: 1;
+  /* repeat the background on the x axis so we can tile the middle section of
+     the trident regardless of how big the container is */
+  background-repeat: repeat-x;
+}
+.trident-right {
+  background-image: url(/images/trident-right-01.svg);
+  background-repeat: no-repeat;
+  width: 199px;
+}
+
+.btn,
+.btn-medium {
   display: block;
   width: 100%;
+  max-width: 400px;
   height: 48px;
   font-size: 32px;
   line-height: 48px;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   background-color: rgb(47 163 77 / 53%);
   border-radius: 6px;
   transition: transform 0.3s ease-in-out, background-color 0.2s ease-in-out !important;
 }
-.btn:hover {
+.w-100 {
+  width: 100%;
+  max-width: 100%;
+}
+
+.btn-medium {
+  height: 28px;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.btn:hover,
+.btn-medium:hover {
   background-color: rgb(47 163 77 / 100%);
 }
 
-
-
 #popular_rides img {
-  margin: auto;
+  width: 100%;
 }
 
 /* a review from a guest, intended to take up full container width */
@@ -153,12 +267,13 @@ img {
 
 /* These styles are rougly taken from Bootstrap v5, but are modified to make
    the container a bit wider than bootstrap normally uses */
-.container, .container-fluid {
-    width: 100%;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-right: auto;
-    margin-left: auto;
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -187,53 +302,72 @@ img {
   }
 }
 
-
 :root {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
 }
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-.row>* {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y);
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
 }
 
 .row .col-1-3 {
-    width: 33.3%;
+  width: 33.3%;
 }
 
 .row .col-2-3 {
-    width: 66.6%;
+  width: 66.6%;
 }
 
 .row .col-1-2 {
-    width: 50%;
+  width: 50%;
 }
 
 .row .col-1-4 {
-    width: 25%;
+  width: 25%;
 }
 
 .row .col-3-4 {
-    width: 75%;
+  width: 75%;
 }
 
-.fab, .fa-brands {
+.fab,
+.fa-brands {
   font-family: var(--fa-style-family-brands);
 }
-.fa,.fa-brands,.fa-classic,.fa-duotone,.fa-light,.fa-regular,.fa-sharp,.fa-sharp-solid,.fa-solid,.fa-thin,.fab,.fad,.fal,.far,.fas,.fasl,.fasr,.fass,.fast,.fat {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display,inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto
+.fa,
+.fa-brands,
+.fa-classic,
+.fa-duotone,
+.fa-light,
+.fa-regular,
+.fa-sharp,
+.fa-sharp-solid,
+.fa-solid,
+.fa-thin,
+.fab,
+.fad,
+.fal,
+.far,
+.fas,
+.fasl,
+.fasr,
+.fass,
+.fast,
+.fat {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
 }

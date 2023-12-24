@@ -6,5 +6,5 @@ Members:
 - LANNAR DEAN (Offers & Rides page)
 - ANA-MARIA FOTACHE-VORNICU (Explore the Rides page)
 - YASHAR JANPARVAR JAVDANI (Home page)
-- HAMNA QURESHI (extra 4th page)
+- HAMNA QURESHI (Events and Shows page)
 - BONNO TSAATSELA (M.I.A.)
