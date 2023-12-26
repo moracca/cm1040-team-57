@@ -111,6 +111,33 @@ nav ul li:not(:last-of-type) {
   }
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #6690ab;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 20px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 section {
   padding: 20px;
   text-align: center;
@@ -134,6 +161,15 @@ img {
   max-width: 100%;
   border-radius: 6px;
   display: block;
+}
+
+span.star::before {
+  content: "\2605";
+  font-size: 36px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  color: #ffd624;
 }
 
 .social-links a {
