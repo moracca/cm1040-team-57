@@ -1,14 +1,21 @@
 
 /* animate the transition so it will grow and shrink gradually */
-#packages .col * {
-    transition: transform 0.3s ease-in-out;
+#packages .package * {
+    transition: 0.3s ease-in-out;
 }
+#packages .package img {
+    filter:brightness(0.8);
+}
+
 /* when hovering over a package, grow all of its contents slightly */
-#packages .col:hover * {
+#packages .package:hover * {
     transform: scale(1.1);
 }
-#packages .col-1-3:hover * {
+#packages .package:hover * {
     transform: scale(1.05);
+}
+#packages .package:hover img {
+    filter:brightness(1);
 }
 
 /* container for the overlap spans which cover the bottom 48px of this container
@@ -50,4 +57,16 @@ a.price:hover {
     font-size: 14px;
     line-height: 30px;
     display: block;
+}
+
+
+.package {
+    display: flex;
+    flex-direction: column;
+}
+
+.package p {
+    flex: 1;
+    display: grid;
+    align-items: end;
 }
