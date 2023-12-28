@@ -302,6 +302,9 @@ span.overlay {
 #popular_rides img {
   width: 100%;
 }
+#popular_rides .ride:hover img {
+  filter: brightness(1.25);
+}
 
 /* a review from a guest, intended to take up full container width */
 .review {

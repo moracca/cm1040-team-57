@@ -36,13 +36,12 @@
 
 /* lower the brightness of the images and set transition to 1 second */
 #rides img {
-  filter: brightness(80%);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 /* when hovering over an image brightness will go to 100% and image will be bigger in 1 second */
-#rides img:hover {
-  filter: brightness(100%);
+#rides .ride:hover img {
+  filter: brightness(1.25);
   transform: scale(1.03);
 }
 
