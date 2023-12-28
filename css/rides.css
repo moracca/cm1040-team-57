@@ -61,11 +61,11 @@
   left: 50%;
   /* move the element based on its size in order to center it */
   transform: translate(-50%, -50%);
-  padding: 10px;
+  padding: 20px;
   border-radius: 6px;
   width: 50%;
   height: 50%;
-  background: #42e6f9;
+  background: #0ce7ff;
   z-index: 20;
 }
 
@@ -97,6 +97,7 @@
   cursor: pointer;
 }
 
+/* change the styling if the screen is smaller than 768px */
 @media (max-width: 768px) {
   .rides-list {
     grid-template-columns: repeat(1, 1fr);
@@ -106,6 +107,9 @@
   }
   .ride-description {
     font-size: 15px;
+  }
+  .modal {
+    padding: 10px;
   }
   .modal-info,
   .close-btn {
