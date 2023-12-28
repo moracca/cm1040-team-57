@@ -43,7 +43,40 @@
 /* when hovering over an image brightness will go to 100% and image will be bigger in 1 second */
 #rides img:hover {
   filter: brightness(100%);
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+.modal {
+  /* initially the modal element is hidden, but the show class is added on button click */
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: start;
+  /* move the modal in the center of the screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 50%;
+  height: 50%;
+  background: #158d9a;
+  z-index: 20;
+}
+
+.show {
+  visibility: visible;
+}
+
+.modal-info {
+  z-index: 100;
+  color: #fff;
+}
+
+.close-btn {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -55,5 +88,8 @@
   }
   .ride-description {
     font-size: 15px;
+  }
+  .modal-info {
+    font-size: 18px;
   }
 }
