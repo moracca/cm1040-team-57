@@ -21,6 +21,7 @@
   </head>
   <body>
     <header>
+      <!-- navbar which contains links to the 4 pages -->
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -38,7 +39,9 @@
       </nav>
     </header>
 
+    <!-- main section of the rides page which is a container for the rides section -->
     <main class="container">
+      <!-- rides section contains a title, description and the rides list -->
       <section id="rides" class="row">
         <h1>Explore the Rides</h1>
         <p>
@@ -47,6 +50,7 @@
           Choose from rides like The Crazy Loop or our classic Lazy River and
           enjoy the summer in Poseidon's Paradise.
         </p>
+        <!-- the rides list -->
         <div class="rides-list">
           <div class="ride">
             <!-- image generated using Midjourney AI discord bot.
@@ -57,6 +61,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+            <!-- a button to open more info modal -->
             <a class="btn-medium" onclick="toggleModal()"> More Info </a>
             <div class="modal" id="modal">
               <span class="modal-info"
