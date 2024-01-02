@@ -19,6 +19,10 @@
   </head>
   <body>
     <header>
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="Logo" class="logo" />
+        <span class="park-name">Poseidon's Paradise</span>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -27,9 +31,9 @@
           <li class="dropdown">
             <a href="events.html" class="dropbtn">Events and Shows</a>
             <div class="dropdown-content">
-                <a href="concerts.html">Concerts</a>
-                <a href="holiday_events.html">Holiday Events</a>
-                <a href="special_events.html">Special Events</a>
+              <a href="concerts.html">Concerts</a>
+              <a href="holiday_events.html">Holiday Events</a>
+              <a href="special_events.html">Special Events</a>
             </div>
           </li>
         </ul>
@@ -37,72 +41,84 @@
     </header>
 
     <main class="container">
-      <section id="packages" class="row">
+      <section id="packages">
         <h2>Tickets Overview</h2>
-        <aside class="col col-1-3">
-          <!-- image generated using Midjourney AI discord bot.
-                     Prompt: a family enjoying a day at an underwater theme park -->
-          <img src="images/family-fun.png" alt="Family Pass tickets" />
-          <h3>1 Day Ticket</h3>
-          <p>Price: $100</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <p><a href="offers.html" class="btn">Buy Now</a></p>
-        </aside>
-        <aside class="col col-1-3">
-          <!-- image generated using Midjourney AI discord bot.
-                     Prompt: an underwater theme park ith rides, mermaids, and exotic underwater fish  -->
-          <img src="images/pond.png" alt="Family Pass tickets" />
-          <h3>1 Day Combo Ticket</h3>
-          <p>Price: $120</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <p><a href="offers.html" class="btn">Buy Now</a></p>
-        </aside>
-        <aside class="col col-1-3">
-          <!-- image generated using Midjourney AI discord bot.
-                     Prompt: a giant humpback whale shaped submarine, with windows and tourists inside looking out into the ocean -->
-          <img src="images/sightseeing.png" alt="Underwater Tours" />
-          <h3>Annual Pass</h3>
-          <p>Price: $300</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <p><a href="offers.html" class="btn">Buy Now</a></p>
-        </aside>
+        <div class="row grid grid-3">
+          <aside class="package">
+            <!-- image generated using Midjourney AI discord bot.
+                            Prompt: a family enjoying a day at an underwater theme park -->
+            <img src="images/family-fun.png" alt="Family Pass tickets" />
+            <h3>1 Day Ticket</h3>
+            <p>Price: $100</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p><a href="offers.html" class="btn">Buy Now</a></p>
+          </aside>
+          <aside class="package">
+            <!-- image generated using Midjourney AI discord bot.
+                            Prompt: an underwater theme park ith rides, mermaids, and exotic underwater fish  -->
+            <img src="images/pond.png" alt="Family Pass tickets" />
+            <h3>1 Day Combo Ticket</h3>
+            <p>Price: $120</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p><a href="offers.html" class="btn">Buy Now</a></p>
+          </aside>
+          <aside class="package">
+            <!-- image generated using Midjourney AI discord bot.
+                            Prompt: a giant humpback whale shaped submarine, with windows and tourists inside looking out into the ocean -->
+            <img src="images/sightseeing.png" alt="Underwater Tours" />
+            <h3>Annual Pass</h3>
+            <p>Price: $300</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p><a href="offers.html" class="btn">Buy Now</a></p>
+          </aside>
+        </div>
       </section>
 
       <section id="popular_rides" class="row">
         <h2>Most Popular Rides</h2>
-        <aside class="col col-1-2">
-          <h3>Viking Voyage</h3>
-          <!-- image generated using Midjourney AI discord bot.
-                         Prompt: an underwater submarine that looks like a viking ship, with lots of tourists looking out the window -->
-          <img src="images/viking-ride.png" alt="Ride Picture" />
-          <p><a href="rides.html" class="btn w-100">More Info</a></p>
-        </aside>
-        <aside class="col col-1-2">
-          <h3>The Hidden Treasure</h3>
-          <!-- image generated using Midjourney AI discord bot.
-                         Prompt: an underwater pirate shipwreck with lots of colorful fish swimming around -->
-          <img src="images/pirate-ride.png" alt="Ride Picture" />
-          <p><a href="rides.html" class="btn w-100">More Info</a></p>
-        </aside>
-        <aside class="col col-1-2">
-          <h3>Sophia White</h3>
-          <img src="images/sophia-white.png" alt="Ride Picture" />
-          <p><a href="rides.html" class="btn w-100">More Info</a></p>
-        </aside>
-        <aside class="col col-1-2">
-          <h3>Dragon's Flight</h3>
-          <img src="images/dragons-flight.png" alt="Ride Picture" />
-          <p><a href="rides.html" class="btn w-100">More Info</a></p>
-        </aside>
+        <div class="row grid grid-2">
+          <aside class="ride">
+            <div class="overlay-img">
+              <!-- image generated using Midjourney AI discord bot.
+                                    Prompt: an underwater submarine that looks like a viking ship, with lots of tourists looking out the window -->
+              <img src="images/viking-ride.png" alt="Ride Picture" />
+              <span class="overlay">Viking Voyage</span>
+            </div>
+            <p><a href="rides.html" class="btn w-100">More Info</a></p>
+          </aside>
+          <aside class="ride">
+            <div class="overlay-img">
+              <!-- image generated using Midjourney AI discord bot.
+                                    Prompt: an underwater pirate shipwreck with lots of colorful fish swimming around -->
+              <img src="images/pirate-ride.png" alt="Ride Picture" />
+              <span class="overlay">The Hidden Treasure</span>
+            </div>
+            <p><a href="rides.html" class="btn w-100">More Info</a></p>
+          </aside>
+          <aside class="ride">
+            <div class="overlay-img">
+              <img src="images/sophia-white.png" alt="Ride Picture" />
+              <span class="overlay">Sophia White</span>
+            </div>
+            <p><a href="rides.html" class="btn w-100">More Info</a></p>
+          </aside>
+          <aside class="ride">
+            <div class="overlay-img">
+              <img src="images/dragons-flight.png" alt="Ride Picture" />
+              <span class="overlay">Dragon's Flight</span>
+            </div>
+            <p><a href="rides.html" class="btn w-100">More Info</a></p>
+          </aside>
+        </div>
       </section>
 
       <section id="reviews">
@@ -126,7 +142,9 @@
             >
           </p>
           <p>
-            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+            <span class="star"></span><span class="star"></span
+            ><span class="star"></span><span class="star"></span
+            ><span class="star"></span>
           </p>
           <h4>Alexander Brown</h4>
         </article>
@@ -149,7 +167,9 @@
             >
           </p>
           <p>
-            <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+            <span class="star"></span><span class="star"></span
+            ><span class="star"></span><span class="star"></span
+            ><span class="star"></span>
           </p>
           <h4>Harper Clark</h4>
         </article>

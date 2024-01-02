@@ -15,11 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet" />
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+    <script src="/js/modal.js"></script>
   </head>
   <body>
     <!-- the header includes the main logo, title, and navbar links for the site -->
     <header>
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="Logo" class="logo" />
+        <span class="park-name">Poseidon's Paradise</span>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -54,19 +62,25 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a href="#purchase_family_pass" class="btn price">$150</a>
+            <a class="btn price modal-toggle" data-target="#family-pass-modal"
+              >$150</a
+            >
           </div>
           <div class="package">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: an underwater theme park ith rides, mermaids, and exotic underwater fish  -->
-            <img src="images/pond.png" alt="Family Pass tickets" />
+            <img src="images/pond.png" alt="an image of an underwater pond" />
             <h2>Individual Pass</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a href="#purchase_family_pass" class="btn price">$60</a>
+            <a
+              class="btn price modal-toggle"
+              data-target="#individual-pass-modal"
+              >$60</a
+            >
           </div>
           <div class="package">
             <!-- image generated using Midjourney AI discord bot.
@@ -78,19 +92,25 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a href="#purchase_family_pass" class="btn price">$45</a>
+            <a class="btn price modal-toggle" data-target="#sightseeing-modal"
+              >$45</a
+            >
           </div>
           <div class="package">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: "Underwater Wonderland": A theme park where guests explore aquatic attractions, including a walk-through aquarium tunnel with playful, costumed sea creatures. -->
-            <img src="images/tunnel.png" alt="Tunnel" />
+            <img
+              src="images/tunnel.png"
+              alt="Underwater Tunnel called the Aquaduct" />
             <h2>Aquaduct Only</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a href="#purchase_family_pass" class="btn price">$25</a>
+            <a class="btn price modal-toggle" data-target="#aquaduct-modal"
+              >$25</a
+            >
           </div>
         </div>
       </section>
@@ -108,70 +128,76 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
 
-            <a href="" class="btn price margin-auto mt-5">More Info</a>  
+            <a href="" class="btn price margin-auto mt-5">More Info</a>
           </div>
           <div>
             <div class="overlay-img">
               <!-- image generated using Midjourney AI discord bot.
-                         Prompt: a view from below a group of hammerhead sharks, looking up from within a glass tunnel, surrounded by beautiful fish -->
-              <img src="images/family-eating-meal.png" alt="family eating a meal underwater" />
+                         Prompt: a family eating a meal together at a picnic table inside a glass dome that is underwater -->
+              <img
+                src="images/family-eating-meal.png"
+                alt="family eating a meal underwater" />
               <span class="overlay">Save big!</span>
             </div>
           </div>
         </div>
 
         <div class="trident-divider">
-          <div class="trident trident-left"></div><div class="trident trident-middle"></div><div class="trident trident-right"></div>
+          <div class="trident trident-left"></div>
+          <div class="trident trident-middle"></div>
+          <div class="trident trident-right"></div>
         </div>
-        
+
         <div class="row offer grid grid-3 grid-sm-1">
-            <div class="">
-              <div class="overlay-img">
-                <!-- image generated using Midjourney AI discord bot.
+          <div class="">
+            <div class="overlay-img">
+              <!-- image generated using Midjourney AI discord bot.
                            Prompt: a view from below a group of hammerhead sharks, looking up from within a glass tunnel, surrounded by beautiful fish -->
-                <img src="images/sharks.png" alt="sharks circling" />
-                <span class="overlay">25% off <sup>*</sup></span>
-              </div>
+              <img src="images/sharks.png" alt="sharks circling" />
+              <span class="overlay">25% off <sup>*</sup></span>
             </div>
-            <div class="grid-span-2">
-              <h2>Shark Exhibit 25% off</h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-              
-              <a href="" class="btn price margin-auto mt-5">More Info</a>  
-            </div>
+          </div>
+          <div class="grid-span-2">
+            <h2>Shark Exhibit 25% off</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+
+            <a href="" class="btn price margin-auto mt-5">More Info</a>
+          </div>
         </div>
 
         <div class="trident-divider flipped">
-          <div class="trident trident-left"></div><div class="trident trident-middle"></div><div class="trident trident-right"></div>
+          <div class="trident trident-left"></div>
+          <div class="trident trident-middle"></div>
+          <div class="trident trident-right"></div>
         </div>
-        
-        <div class="row offer grid grid-3 grid-sm-1">
-            <div class="grid-span-2">
-                <h2>Buy One Get One Free Aquaduct Tickets</h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
 
-                <a href="" class="btn price margin-auto mt-5">More Info</a>  
-            </div>
-            <div>
-                <div class="overlay-img">
-                    <!-- image generated using Midjourney AI discord bot.
+        <div class="row offer grid grid-3 grid-sm-1">
+          <div class="grid-span-2">
+            <h2>Buy One Get One Free Aquaduct Tickets</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+
+            <a href="" class="btn price margin-auto mt-5">More Info</a>
+          </div>
+          <div>
+            <div class="overlay-img">
+              <!-- image generated using Midjourney AI discord bot.
                         Prompt: an underwater theme park with rides, mermaids, and exotic underwater fish -->
-                    <img src="images/walkway.png" alt="underwater walkway" />
-                    <span class="overlay">B.O.G.O. <sup>*</sup></span>
-                </div>
+              <img src="images/walkway.png" alt="underwater walkway" />
+              <span class="overlay">B.O.G.O. <sup>*</sup></span>
             </div>
+          </div>
         </div>
       </section>
     </main>
@@ -204,5 +230,59 @@
       </div>
       <p>&copy; 2023 Group-57. All rights reserved.</p>
     </footer>
+
+    <div class="modal" id="family-pass-modal">
+      <span class="modal-info"
+        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+        gravida neque, ac aliquam lectus nunc at ipsum.
+      </span>
+      <a class="close-btn modal-toggle" data-target="#family-pass-modal"
+        >Close</a
+      >
+    </div>
+
+    <div class="modal" id="individual-pass-modal">
+      <span class="modal-info"
+        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+        gravida neque, ac aliquam lectus nunc at ipsum.
+      </span>
+      <a class="close-btn modal-toggle" data-target="#individual-pass-modal"
+        >Close</a
+      >
+    </div>
+
+    <div class="modal" id="sightseeing-modal">
+      <span class="modal-info"
+        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+        gravida neque, ac aliquam lectus nunc at ipsum.
+      </span>
+      <a class="close-btn modal-toggle" data-target="#sightseeing-modal"
+        >Close</a
+      >
+    </div>
+
+    <div class="modal" id="aquaduct-modal">
+      <span class="modal-info"
+        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+        gravida neque, ac aliquam lectus nunc at ipsum.
+      </span>
+      <a class="close-btn modal-toggle" data-target="#aquaduct-modal">Close</a>
+    </div>
   </body>
 </html>

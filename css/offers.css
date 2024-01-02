@@ -4,18 +4,15 @@
     transition: 0.3s ease-in-out;
 }
 #packages .package img {
-    filter:brightness(0.8);
+    filter:brightness(1);
 }
 
 /* when hovering over a package, grow all of its contents slightly */
 #packages .package:hover * {
-    transform: scale(1.1);
-}
-#packages .package:hover * {
     transform: scale(1.05);
 }
 #packages .package:hover img {
-    filter:brightness(1);
+    filter:brightness(1.25);
 }
 
 /* container for the overlap spans which cover the bottom 48px of this container

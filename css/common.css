@@ -122,7 +122,7 @@ nav ul li:not(:last-of-type) {
   position: absolute;
   background-color: #6690ab;
   min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -142,7 +142,6 @@ nav ul li:not(:last-of-type) {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 section {
   padding: 20px;
@@ -185,7 +184,6 @@ span.star::before {
   display: inline-block;
   margin: 0px 3px;
 }
-
 
 .margin-auto {
   margin: auto;
@@ -252,27 +250,45 @@ span.star::before {
   width: 199px;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin: 0px 20px 0px 20px;
+}
+
+.park-name {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
 /* container for the overlap spans which cover the bottom 48px of this container
    with a semi-transparent bg and some text*/
-   .overlay-img {
-    position: relative;
-    display: inline-block;
+.overlay-img {
+  position: relative;
+  display: inline-block;
 }
 /* This span containing the overlaid text, absolutely positioned to the bottom
    of the container */
 span.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #08244fa3;
-    border-radius: 0px 0px 6px 6px;
-    font-size: 48px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #08244fa3;
+  border-radius: 0px 0px 6px 6px;
+  font-size: 48px;
 }
 
 .btn,
 .btn-medium {
   display: block;
+  cursor: pointer;
   width: 100%;
   max-width: 400px;
   height: 48px;
@@ -302,6 +318,9 @@ span.overlay {
 
 #popular_rides img {
   width: 100%;
+}
+#popular_rides .ride:hover img {
+  filter: brightness(1.25);
 }
 
 /* a review from a guest, intended to take up full container width */
@@ -399,7 +418,6 @@ span.overlay {
   width: 75%;
 }
 
-
 /* 
 GRID LAYOUT:
 This system creates a grid layout using the display: grid style on the parent
@@ -480,9 +498,6 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   grid-column: span 5;
 }
 
-
-
-
 /* Font Awesome v5 free brand icons - used for facebook/instagram/twitter/youtube footer icons */
 .fab,
 .fa-brands {
@@ -515,4 +530,68 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   font-variant: normal;
   line-height: 1;
   text-rendering: auto;
+}
+
+/* modal CSS */
+
+.modal {
+  /* initially the modal element is hidden, but the show class is added on button click */
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: start;
+  /* position the element relative to the viewport, so it stays in place when scrolling */
+  position: fixed;
+  /* move the element 50% from the top and left sides of the screen */
+  top: 50%;
+  left: 50%;
+  /* move the element based on its size in order to center it */
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 6px;
+  width: 50%;
+  height: 50%;
+  background: #0ce7ff;
+  z-index: 20;
+}
+
+/* make the background opaque when modal is opened */
+.modal::after {
+  position: fixed;
+  content: "";
+  /* set top and left properties to -50% in order to cover the whole screen */
+  top: -50%;
+  left: -50%;
+  /* make the element have the whole screen's width and height */
+  width: 100vw;
+  height: 100vh;
+  /* set the opacity */
+  background: rgba(0, 0, 0, 0.5);
+  /* set the z index to a negative value in order to be behind the modal */
+  z-index: -2;
+}
+
+.show {
+  visibility: visible;
+}
+
+.modal-info {
+  color: #fff;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+/* change the styling if the screen is smaller than 768px */
+@media (max-width: 768px) {
+  .modal {
+    padding: 10px;
+  }
+  .modal-info,
+  .close-btn {
+    font-size: 15px;
+  }
 }

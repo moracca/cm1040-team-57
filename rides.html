@@ -16,10 +16,20 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet" />
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- Add the JavaScript code -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+    <script src="/js/modal.js"></script>
   </head>
   <body>
     <header>
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="Logo" class="logo" />
+        <span class="park-name">Poseidon's Paradise</span>
+      </div>
+      <!-- navbar which contains links to the 4 pages -->
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -37,7 +47,9 @@
       </nav>
     </header>
 
+    <!-- main section of the rides page which is a container for the rides section -->
     <main class="container">
+      <!-- rides section contains a title, description and the rides list -->
       <section id="rides" class="row">
         <h1>Explore the Rides</h1>
         <p>
@@ -46,79 +58,209 @@
           Choose from rides like The Crazy Loop or our classic Lazy River and
           enjoy the summer in Poseidon's Paradise.
         </p>
-        <div class="rides-list">
+        <!-- the rides list -->
+        <div class="grid grid-3 grid-sm-1">
           <div class="ride">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: an underwater pirate shipwreck with lots of colorful fish swimming around -->
-            <img src="images/pirate-ride.png" alt="Ride Picture" />
+            <img src="images/pirate-ride.png" alt="The Hidden Treasure" />
             <h3 class="ride-title">The Hidden Treasure</h3>
             <p class="ride-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="rides.html" class="btn-medium">More Info</a>
+            <!-- a button to open more info modal -->
+            <a
+              class="btn-medium modal-toggle"
+              data-target="#hidden-treasure-modal">
+              More Info
+            </a>
+            <div class="modal" id="hidden-treasure-modal">
+              <span class="modal-info"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                egestas gravida mi in molestie. Praesent et mi mauris. In semper
+                fermentum dui imperdiet consectetur. Duis in pharetra neque.
+                Nullam ullamcorper erat at nibh venenatis placerat. Fusce
+                pulvinar vehicula eros, quis fringilla odio semper vel. Integer
+                sagittis, mi nec imperdiet interdum, libero dui gravida neque,
+                ac aliquam lectus nunc at ipsum.
+              </span>
+              <a
+                class="close-btn modal-toggle"
+                data-target="#hidden-treasure-modal"
+                >Close</a
+              >
+            </div>
           </div>
           <div class="ride">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: underwater theme park ride called splash -->
-            <img src="images/splash-ride.png" alt="Ride Picture" />
+            <img src="images/splash-ride.png" alt="Splash" />
             <h3 class="ride-title">Splash</h3>
             <p class="ride-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="rides.html" class="btn-medium">More Info</a>
+            <a class="btn-medium modal-toggle" data-target="#splash-modal">
+              More Info
+            </a>
+            <div class="modal" id="splash-modal">
+              <span class="modal-info"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                egestas gravida mi in molestie. Praesent et mi mauris. In semper
+                fermentum dui imperdiet consectetur. Duis in pharetra neque.
+                Nullam ullamcorper erat at nibh venenatis placerat. Fusce
+                pulvinar vehicula eros, quis fringilla odio semper vel. Integer
+                sagittis, mi nec imperdiet interdum, libero dui gravida neque,
+                ac aliquam lectus nunc at ipsum.
+              </span>
+              <a class="close-btn modal-toggle" data-target="#splash-modal"
+                >Close</a
+              >
+            </div>
           </div>
           <div class="ride">
-            <img src="images/dragons-flight.png" alt="Ride Picture" />
+            <img src="images/dragons-flight.png" alt="Dragon's Flight" />
             <h3 class="ride-title">Dragon's Flight</h3>
             <p class="ride-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="rides.html" class="btn-medium">More Info</a>
+            <a
+              class="btn-medium modal-toggle"
+              data-target="#dragons-flight-modal">
+              More Info
+            </a>
+            <div class="modal" id="dragons-flight-modal">
+              <span class="modal-info"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                egestas gravida mi in molestie. Praesent et mi mauris. In semper
+                fermentum dui imperdiet consectetur. Duis in pharetra neque.
+                Nullam ullamcorper erat at nibh venenatis placerat. Fusce
+                pulvinar vehicula eros, quis fringilla odio semper vel. Integer
+                sagittis, mi nec imperdiet interdum, libero dui gravida neque,
+                ac aliquam lectus nunc at ipsum.
+              </span>
+              <a
+                class="close-btn modal-toggle"
+                data-target="#dragons-flight-modal"
+                >Close</a
+              >
+            </div>
           </div>
           <div class="ride">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: an underwater roller coaster ride called the crazy loop -->
-            <img src="images/loop-ride.png" alt="Ride Picture" />
+            <img src="images/loop-ride.png" alt="The Crazy Loop" />
             <h3 class="ride-title">The Crazy Loop</h3>
             <p class="ride-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="rides.html" class="btn-medium">More Info</a>
+            <a class="btn-medium modal-toggle" data-target="#crazy-loop-modal">
+              More Info
+            </a>
+            <div class="modal" id="crazy-loop-modal">
+              <span class="modal-info"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                egestas gravida mi in molestie. Praesent et mi mauris. In semper
+                fermentum dui imperdiet consectetur. Duis in pharetra neque.
+                Nullam ullamcorper erat at nibh venenatis placerat. Fusce
+                pulvinar vehicula eros, quis fringilla odio semper vel. Integer
+                sagittis, mi nec imperdiet interdum, libero dui gravida neque,
+                ac aliquam lectus nunc at ipsum.
+              </span>
+              <a class="close-btn modal-toggle" data-target="#crazy-loop-modal"
+                >Close</a
+              >
+            </div>
           </div>
           <div class="ride">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: an underwater theme park lazy river, with a person floating in an inner tube -->
-            <img src="images/lazy-river-ride.png" alt="Ride Picture" />
+            <img src="images/lazy-river-ride.png" alt="Lazy River" />
             <h3 class="ride-title">Lazy River</h3>
             <p class="ride-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="rides.html" class="btn-medium">More Info</a>
+            <a class="btn-medium modal-toggle" data-target="#lazy-river-modal">
+              More Info
+            </a>
+            <div class="modal" id="lazy-river-modal">
+              <span class="modal-info"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                egestas gravida mi in molestie. Praesent et mi mauris. In semper
+                fermentum dui imperdiet consectetur. Duis in pharetra neque.
+                Nullam ullamcorper erat at nibh venenatis placerat. Fusce
+                pulvinar vehicula eros, quis fringilla odio semper vel. Integer
+                sagittis, mi nec imperdiet interdum, libero dui gravida neque,
+                ac aliquam lectus nunc at ipsum.
+              </span>
+              <a class="close-btn modal-toggle" data-target="#lazy-river-modal"
+                >Close</a
+              >
+            </div>
           </div>
           <div class="ride">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: an underwater submarine that looks like a viking ship, with lots of tourists looking out the window -->
-            <img src="images/viking-ride.png" alt="Ride Picture" />
+            <img src="images/viking-ride.png" alt="Viking Voyage" />
             <h3 class="ride-title">Viking Voyage</h3>
             <p class="ride-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="rides.html" class="btn-medium">More Info</a>
+            <a
+              class="btn-medium modal-toggle"
+              data-target="#viking-voyage-modal">
+              More Info
+            </a>
+            <div class="modal" id="viking-voyage-modal">
+              <span class="modal-info"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                egestas gravida mi in molestie. Praesent et mi mauris. In semper
+                fermentum dui imperdiet consectetur. Duis in pharetra neque.
+                Nullam ullamcorper erat at nibh venenatis placerat. Fusce
+                pulvinar vehicula eros, quis fringilla odio semper vel. Integer
+                sagittis, mi nec imperdiet interdum, libero dui gravida neque,
+                ac aliquam lectus nunc at ipsum.
+              </span>
+              <a
+                class="close-btn modal-toggle"
+                data-target="#viking-voyage-modal"
+                >Close</a
+              >
+            </div>
           </div>
           <div class="ride">
-            <img src="images/sophia-white.png" alt="Ride Picture" />
+            <img src="images/sophia-white.png" alt="Sophia White" />
             <h3 class="ride-title">Sophia White</h3>
             <p class="ride-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="rides.html" class="btn-medium">More Info</a>
+            <a
+              class="btn-medium modal-toggle"
+              data-target="#sophia-white-modal">
+              More Info
+            </a>
+            <div class="modal" id="sophia-white-modal">
+              <span class="modal-info"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                egestas gravida mi in molestie. Praesent et mi mauris. In semper
+                fermentum dui imperdiet consectetur. Duis in pharetra neque.
+                Nullam ullamcorper erat at nibh venenatis placerat. Fusce
+                pulvinar vehicula eros, quis fringilla odio semper vel. Integer
+                sagittis, mi nec imperdiet interdum, libero dui gravida neque,
+                ac aliquam lectus nunc at ipsum.
+              </span>
+              <a
+                class="close-btn modal-toggle"
+                data-target="#sophia-white-modal"
+                >Close</a
+              >
+            </div>
           </div>
         </div>
       </section>

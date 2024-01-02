@@ -1,10 +1,3 @@
-/* the rides-list is a grid that on bigger screens has 3 columns, each takking up one frame of the available space for them */
-.rides-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-}
-
 /* make all elements with class col that are found in the rides element to have display flex and align text and button to start */
 .ride {
   display: flex;
@@ -36,20 +29,18 @@
 
 /* lower the brightness of the images and set transition to 1 second */
 #rides img {
-  filter: brightness(80%);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 /* when hovering over an image brightness will go to 100% and image will be bigger in 1 second */
-#rides img:hover {
-  filter: brightness(100%);
-  transform: scale(1.05);
+#rides .ride:hover img {
+  filter: brightness(1.25);
+  transform: scale(1.03);
 }
 
+
+/* change the styling if the screen is smaller than 768px */
 @media (max-width: 768px) {
-  .rides-list {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .ride-title {
     font-size: 20px;
   }
