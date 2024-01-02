@@ -514,3 +514,70 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   line-height: 1;
   text-rendering: auto;
 }
+
+
+
+/* modal CSS */
+
+.modal {
+  /* initially the modal element is hidden, but the show class is added on button click */
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: start;
+  /* position the element relative to the viewport, so it stays in place when scrolling */
+  position: fixed;
+  /* move the element 50% from the top and left sides of the screen */
+  top: 50%;
+  left: 50%;
+  /* move the element based on its size in order to center it */
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 6px;
+  width: 50%;
+  height: 50%;
+  background: #0ce7ff;
+  z-index: 20;
+}
+
+/* make the background opaque when modal is opened */
+.modal::after {
+  position: fixed;
+  content: "";
+  /* set top and left properties to -50% in order to cover the whole screen */
+  top: -50%;
+  left: -50%;
+  /* make the element have the whole screen's width and height */
+  width: 100vw;
+  height: 100vh;
+  /* set the opacity */
+  background: rgba(0, 0, 0, 0.5);
+  /* set the z index to a negative value in order to be behind the modal */
+  z-index: -2;
+}
+
+.show {
+  visibility: visible;
+}
+
+.modal-info {
+  color: #fff;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+
+/* change the styling if the screen is smaller than 768px */
+@media (max-width: 768px) {
+  .modal {
+    padding: 10px;
+  }
+  .modal-info,
+  .close-btn {
+    font-size: 15px;
+  }
+}
