@@ -14,7 +14,8 @@ $(function() {
     // we can't add a click callback directly to the ::after pseudo element since
     // it is not part of the DOM.
     $(".modal").click(function(e) {
-        // check if the click was outside the boundary of the modal div
+        // check if the click was outside the boundary of the modal div.
+        // See https://stackoverflow.com/a/23243996/11644659
         if (e.offsetX < 0 || e.offsetX > this.offsetWidth || e.offsetY < 0 || e.offsetY > this.offsetHeight) {
             // close all modals
             hideAllModals();
