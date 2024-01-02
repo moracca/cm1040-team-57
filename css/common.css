@@ -250,6 +250,23 @@ span.star::before {
   width: 199px;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin: 0px 20px 0px 20px;
+}
+
+.park-name {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
 /* container for the overlap spans which cover the bottom 48px of this container
    with a semi-transparent bg and some text*/
 .overlay-img {
@@ -515,8 +532,6 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   text-rendering: auto;
 }
 
-
-
 /* modal CSS */
 
 .modal {
@@ -569,7 +584,6 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
 .close-btn {
   cursor: pointer;
 }
-
 
 /* change the styling if the screen is smaller than 768px */
 @media (max-width: 768px) {

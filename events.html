@@ -1,130 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poseidon's Paradise - Adventure Awaits</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/offers.css">
-    <link rel="stylesheet" href="css/brands.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/offers.css" />
+    <link rel="stylesheet" href="css/brands.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Load Quicksand font https://fonts.google.com/specimen/Quicksand -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet" />
 
     <!-- Add the JavaScript code -->
     <script src="/js/slideshow.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="offers.html">Prices &amp; Offers</a></li>
-                <li><a href="rides.html">Explore the Rides</a></li>
-                <li class="dropdown">
-                    <a href="events.html" class="dropbtn">Events and Shows</a>
-                    <div class="dropdown-content">
-                        <a href="concerts.html">Concerts</a>
-                <a href="holiday_events.html">Holiday Events</a>
-                <a href="special_events.html">Special Events</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="Logo" class="logo" />
+        <span class="park-name">Poseidon's Paradise</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="offers.html">Prices &amp; Offers</a></li>
+          <li><a href="rides.html">Explore the Rides</a></li>
+          <li class="dropdown">
+            <a href="events.html" class="dropbtn">Events and Shows</a>
+            <div class="dropdown-content">
+              <a href="concerts.html">Concerts</a>
+              <a href="holiday_events.html">Holiday Events</a>
+              <a href="special_events.html">Special Events</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-
     <main class="container">
-       
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <a href="special_events.html"><img src="images/fireworks-spectacular.png" style="width:100%"> </a>
-                    <div class="text"> Underwater Fireworks Spectacular</div>
-                </div>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <a href="special_events.html"
+            ><img src="images/fireworks-spectacular.png" style="width: 100%" />
+          </a>
+          <div class="text">Underwater Fireworks Spectacular</div>
+        </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <a href="concerts.html"><img src="images/music-festival.png" style="width:100%"></a>
-                    <div class="text">Underwater Music festival</div>
-                </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <a href="concerts.html"
+            ><img src="images/music-festival.png" style="width: 100%"
+          /></a>
+          <div class="text">Underwater Music festival</div>
+        </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <a href="holiday_events.html"><img src="images/santas-village.png" style="width:100%"></a>
-                    <div class="text">Underwater Santa's Magical Village</div>
-                </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <a href="holiday_events.html"
+            ><img src="images/santas-village.png" style="width: 100%"
+          /></a>
+          <div class="text">Underwater Santa's Magical Village</div>
+        </div>
 
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
 
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
 
+      <section>
+        <div class="registration">
+          <h2>Registration</h2>
+          <p>Register now to secure your spot!</p>
+          <label for="event-select">Select Event:</label>
+          <select id="event-select" onchange="openHtmlFile(this.value)">
+            <option value="" disabled selected>Select an option:</option>
+            <option value="special_events.html">Special Events</option>
+            <option value="concerts.html">Concerts</option>
+            <option value="holiday_events.html">Holiday Events</option>
+          </select>
+        </div>
 
-            <section>
-                <div class="registration">
-                    <h2>Registration</h2>
-                    <p>Register now to secure your spot!</p>
-                    <label for="event-select">Select Event:</label>
-                    <select id="event-select" onchange="openHtmlFile(this.value)">
-                        <option value="" disabled selected>Select an option:</option>
-                        <option value="special_events.html">Special Events</option>
-                        <option value="concerts.html">Concerts</option>
-                        <option value="holiday_events.html">Holiday Events</option>
-                    </select>
-                </div>
-            
-                <div class="deadline">
-                    <h2>Registration Deadline</h2>
-                    <p>The registration deadline is March 30, 2024.</p>
-                </div>
-            </section>
-            
-            <script>
-                function openHtmlFile(value) {
-                    if (value) {
-                        window.location.href = value;
-                    }
-                }
-            </script>
-            
-    
+        <div class="deadline">
+          <h2>Registration Deadline</h2>
+          <p>The registration deadline is March 30, 2024.</p>
+        </div>
+      </section>
 
-
-
+      <script>
+        function openHtmlFile(value) {
+          if (value) {
+            window.location.href = value;
+          }
+        }
+      </script>
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/poseidons_paradise" target="_blank" aria-label="Facebook">
-                <i class="fa-brands fa-square-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/poseidons_paradise" target="_blank" aria-label="Instagram">
-                <i class="fa-brands fa-square-instagram"></i>
-            </a>
-            <a href="https://www.twitter.com/poseidons_paradise" target="_blank" aria-label="Twitter">
-                <i class="fa-brands fa-square-twitter"></i>
-            </a>
-            <a href="https://www.youtube.com/poseidons_paradise" target="_blank" aria-label="YouTube">
-                <i class="fa-brands fa-square-youtube"></i>
-            </a>
-        </div>
-        <p>&copy; 2023 Group-57. All rights reserved.</p>
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/poseidons_paradise"
+          target="_blank"
+          aria-label="Facebook">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/poseidons_paradise"
+          target="_blank"
+          aria-label="Instagram">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a
+          href="https://www.twitter.com/poseidons_paradise"
+          target="_blank"
+          aria-label="Twitter">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/poseidons_paradise"
+          target="_blank"
+          aria-label="YouTube">
+          <i class="fa-brands fa-square-youtube"></i>
+        </a>
+      </div>
+      <p>&copy; 2023 Group-57. All rights reserved.</p>
     </footer>
-</body>
-
+  </body>
 </html>
