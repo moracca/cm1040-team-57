@@ -15,24 +15,6 @@
     filter:brightness(1.25);
 }
 
-/* container for the overlap spans which cover the bottom 48px of this container
-   with a semi-transparent bg and some text*/
-.overlay-img {
-    position: relative;
-    display: inline-block;
-}
-/* This span containing the overlaid text, absolutely positioned to the bottom
-   of the container */
-span.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #08244fa3;
-    border-radius: 0px 0px 6px 6px;
-    font-size: 48px;
-}
-
 .offer {
     margin: 24px 0px;
 }

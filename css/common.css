@@ -46,17 +46,24 @@ body {
 main {
   /* allow content to grow to take up available space. */
   flex: 1;
+  /* leave enough margin for the header, which is fixed in place */
+  margin-top: 140px;
 }
 
 header {
-  background-color: rgb(11, 92, 89, 0.5);
+  background-color: rgb(5 46 103);
   color: white;
-  padding: 20px 0;
+  padding: 10px 0 0;
+  z-index: 1;
+  /* fix the top header in place so it is always visible on screen */
+  position: fixed;
+  width: 100%;
 }
 
 nav ul {
   list-style-type: none;
   text-align: center;
+  margin: 10px;
 }
 
 nav ul li {
@@ -71,6 +78,7 @@ nav ul li a {
   font-size: 28px;
   position: relative;
   padding-bottom: 10px;
+  vertical-align: middle;
 }
 
 /* Add an underline effect to the nav links, which is normally hidden (with
@@ -100,9 +108,20 @@ nav ul li a:hover::after {
   -moz-transform: scaleX(1);
   transform: scaleX(1);
 }
-nav ul li:not(:last-of-type) {
-  border-right: 1px solid #fff;
-  padding-right: 25px;
+
+/* target all nav li except the last and add a pillar icon after it to divide the
+   nav links */
+nav ul li:not(:last-of-type)::after {
+  content: '';
+  height: 40px;
+  width: 30px;
+  /* pillar icon from https://thehungryjpeg.com/product/3905941-ancient-classic-pillars-greek-and-roman-architecture-pillars-histori */
+  background-image: url(/images/pillar.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @media (max-width: 992px) {
@@ -256,6 +275,7 @@ span.star::before {
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #FFF;
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -277,7 +297,7 @@ span.star::before {
 }
 /* This span containing the overlaid text, absolutely positioned to the bottom
    of the container */
-span.overlay {
+span.overlay,figcaption.overlay {
   position: absolute;
   bottom: 0;
   left: 0;
