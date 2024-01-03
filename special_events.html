@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Hamna Qureshi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Underwater Music Festival</title>
     <link rel="stylesheet" href="css/common.css" />
@@ -19,7 +20,7 @@
 
   <body>
     <header>
-      <div class="logo-container">
+      <div class="logo-container container">
         <img src="images/logo.svg" alt="Logo" class="logo" />
         <span class="park-name">Poseidon's Paradise</span>
       </div>
@@ -116,7 +117,7 @@
       <section>
         <h2>Registration</h2>
         <p>Secure your spot now for Underwater Santa's Magical Village!</p>
-        <button onclick="openRegistrationPage()">Register Now</button>
+        <a href="registration.html" class="btn margin-auto">Register Now</a>
       </section>
     </main>
 
@@ -150,10 +151,5 @@
       <p>&copy; 2023 Group-57. All rights reserved.</p>
     </footer>
 
-    <script>
-      function openRegistrationPage() {
-        window.location.href = "registration.html";
-      }
-    </script>
   </body>
 </html>

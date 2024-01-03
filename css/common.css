@@ -254,6 +254,8 @@ span.star::before {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #FFF;
 }
 
 .logo {
@@ -262,7 +264,7 @@ span.star::before {
 }
 
 .park-name {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 600;
   color: #fff;
 }
@@ -307,7 +309,7 @@ span.overlay {
 
 .btn-medium {
   height: 28px;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 28px;
 }
 
@@ -594,4 +596,34 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   .close-btn {
     font-size: 15px;
   }
+}
+
+/* Olympus font obtained from https://www.fontspace.com/olympus-font-f11234
+   and converted to woff format using https://transfonter.org/ */
+@font-face {
+  font-family: 'Olympus';
+  src: url('/fonts/Olympus.woff2') format('woff2'),
+      url('/fonts/Olympus.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Olympus';
+  src: url('/fonts/OlympusBold.woff2') format('woff2'),
+      url('/fonts/OlympusBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,h2,h3,h4,h5,h6,a,button,.btn,.overlay,.park-name {
+  font-family: 'Olympus';
+  font-weight: normal;
+  font-style: normal;
+}
+
+a.btn.price {
+  font-family: "Quicksand", sans-serif;
 }
