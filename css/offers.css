@@ -49,3 +49,10 @@ a.price:hover {
     display: grid;
     align-items: end;
 }
+
+.purchaseForm {
+    width: 100%;
+}
+.purchaseForm label {
+    text-align: right;
+}
