@@ -112,7 +112,7 @@ nav ul li a:hover::after {
 /* target all nav li except the last and add a pillar icon after it to divide the
    nav links */
 nav ul li::after {
-  content: '';
+  content: "";
   height: 50px;
   width: 30px;
   /* pillar icon from https://thehungryjpeg.com/product/3905941-ancient-classic-pillars-greek-and-roman-architecture-pillars-histori */
@@ -280,7 +280,7 @@ span.star::before {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #fff;
   padding-bottom: 10px;
 }
 
@@ -303,7 +303,8 @@ span.star::before {
 }
 /* This span containing the overlaid text, absolutely positioned to the bottom
    of the container */
-span.overlay,figcaption.overlay {
+span.overlay,
+figcaption.overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -364,7 +365,10 @@ span.overlay,figcaption.overlay {
   border-radius: 6px;
 }
 
-select, input[type="text"], input[type="tel"], input[type="email"] {
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
   height: 40px;
   border: none;
   border-radius: 6px;
@@ -576,9 +580,8 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
 }
 
 /* modal CSS */
-
 .modal {
-  /* initially the modal element is hidden, but the show class is added on button click */
+  /* initially the modal element is hidden, but the show JS class is added on button click */
   visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -598,6 +601,7 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   min-height: 50%;
   max-height: 90%;
   background: #0ce7ff;
+  /* set to z-index to a higher value so it covers all the other elements */
   z-index: 20;
 }
 
@@ -617,6 +621,7 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   z-index: -2;
 }
 
+/* make the element visible */
 .show {
   visibility: visible;
 }
@@ -643,25 +648,35 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
 /* Olympus font obtained from https://www.fontspace.com/olympus-font-f11234
    and converted to woff format using https://transfonter.org/ */
 @font-face {
-  font-family: 'Olympus';
-  src: url('/fonts/Olympus.woff2') format('woff2'),
-      url('/fonts/Olympus.woff') format('woff');
+  font-family: "Olympus";
+  src: url("/fonts/Olympus.woff2") format("woff2"),
+    url("/fonts/Olympus.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Olympus';
-  src: url('/fonts/OlympusBold.woff2') format('woff2'),
-      url('/fonts/OlympusBold.woff') format('woff');
+  font-family: "Olympus";
+  src: url("/fonts/OlympusBold.woff2") format("woff2"),
+    url("/fonts/OlympusBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
-h1,h2,h3,h4,h5,h6,a,button,.btn,.overlay,.park-name {
-  font-family: 'Olympus';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+.btn,
+.overlay,
+.park-name {
+  font-family: "Olympus";
   font-weight: normal;
   font-style: normal;
 }
