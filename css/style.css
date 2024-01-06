@@ -100,3 +100,9 @@ span.overlay {
     from {opacity: .4}
     to {opacity: 1}
 }
+
+.feature-list li {
+    margin-bottom: 40px;
+    list-style: square;
+    text-align: justify;
+}

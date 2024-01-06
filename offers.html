@@ -131,15 +131,13 @@
 
             <a href="" class="btn price margin-auto mt-5">More Info</a>
           </article>
-          <aside>
-            <fig class="overlay-img">
-              <!-- image generated using Midjourney AI discord bot.
-                         Prompt: a family eating a meal together at a picnic table inside a glass dome that is underwater -->
-              <img
-                src="images/family-eating-meal.png"
-                alt="family eating a meal underwater" />
-              <figcaption class="overlay">Save big!</span>
-            </fig>
+          <aside class="overlay-img">
+            <!-- image generated using Midjourney AI discord bot.
+                        Prompt: a family eating a meal together at a picnic table inside a glass dome that is underwater -->
+            <img
+              src="images/family-eating-meal.png"
+              alt="family eating a meal underwater" />
+            <span class="overlay">Save big!</span>
           </aside>
         </div>
 
@@ -150,13 +148,11 @@
         </div>
 
         <div class="row offer grid grid-3 grid-sm-1">
-          <aside class="">
-            <fig class="overlay-img">
-              <!-- image generated using Midjourney AI discord bot.
-                           Prompt: a view from below a group of hammerhead sharks, looking up from within a glass tunnel, surrounded by beautiful fish -->
-              <img src="images/sharks.png" alt="sharks circling" />
-              <figcaption class="overlay">25% off <sup>*</sup></figcaption>
-            </fig>
+          <aside class="overlay-img">
+            <!-- image generated using Midjourney AI discord bot.
+                        Prompt: a view from below a group of hammerhead sharks, looking up from within a glass tunnel, surrounded by beautiful fish -->
+            <img src="images/sharks.png" alt="sharks circling" />
+            <span class="overlay">25% off <sup>*</sup></span>
           </aside>
           <article class="grid-span-2">
             <h2>Shark Exhibit 25% off</h2>
@@ -191,13 +187,11 @@
 
             <a href="" class="btn price margin-auto mt-5">More Info</a>
           </article>
-          <aside>
-            <figure class="overlay-img">
-              <!-- image generated using Midjourney AI discord bot.
-                        Prompt: an underwater theme park with rides, mermaids, and exotic underwater fish -->
-              <img src="images/walkway.png" alt="underwater walkway" />
-              <figcaption class="overlay">B.O.G.O. <sup>*</sup></figcaption>
-            </figure>
+          <aside class="overlay-img">
+            <!-- image generated using Midjourney AI discord bot.
+                      Prompt: an underwater theme park with rides, mermaids, and exotic underwater fish -->
+            <img src="images/walkway.png" alt="underwater walkway" />
+            <span class="overlay">B.O.G.O. <sup>*</sup></span>
           </aside>
         </div>
       </section>
@@ -296,7 +290,7 @@
       </div>
       <form class="purchaseForm" onsubmit="return purchaseComplete()">
         <div class="grid grid-3 grid-sm-1">
-            <label for="package">Select Package:</label>
+            <label for="family-package-select">Select Package:</label>
             <select name="package" id="family-package-select">
                 <option value="family-pass-1">Family Pass for 4 ($350)</option>
                 <option value="family-pass-2">Family Pass for 5</option>
@@ -338,7 +332,7 @@
             <div class="grid grid-3">
               <input type="text" size="5" id="state" name="state" required>
               <label for="zip">Zip:</label>
-              <input type="text" size="5" id="state" name="state" required>
+              <input type="text" size="5" id="zip" name="zip" required>
             </div>
             <span></span>
 
