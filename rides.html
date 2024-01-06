@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Ana-Maria">
+    <meta name="author" content="Ana-Maria" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poseidon's Paradise - Adventure Awaits</title>
     <link rel="stylesheet" href="css/common.css" />
@@ -25,6 +25,7 @@
     <script src="/js/modal.js"></script>
   </head>
   <body>
+    <!-- header which contains logo, name and navigation -->
     <header>
       <div class="logo-container container">
         <img src="images/logo.svg" alt="Logo" class="logo" />
@@ -52,7 +53,9 @@
     <main class="container">
       <!-- rides section contains a title, description and the rides list -->
       <section id="rides" class="row">
+        <!-- title -->
         <h1>Explore the Rides</h1>
+        <!-- description paragraph -->
         <p>
           Checkout all our rides. Whether you're looking for a thrilling ride or
           just to relax under the sun, you can find both at Poseidon's Paradise!
@@ -61,6 +64,7 @@
         </p>
         <!-- the rides list -->
         <div class="grid grid-3 grid-sm-1">
+          <!-- ride card which has an image, title, short description, and more info button -->
           <div class="ride">
             <!-- image generated using Midjourney AI discord bot.
                          Prompt: an underwater pirate shipwreck with lots of colorful fish swimming around -->
@@ -76,6 +80,7 @@
               data-target="#hidden-treasure-modal">
               More Info
             </a>
+            <!-- modal opened by the more info button -->
             <div class="modal" id="hidden-treasure-modal">
               <span class="modal-info"
                 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -86,6 +91,7 @@
                 sagittis, mi nec imperdiet interdum, libero dui gravida neque,
                 ac aliquam lectus nunc at ipsum.
               </span>
+              <!-- button to close the modal -->
               <a
                 class="close-btn modal-toggle"
                 data-target="#hidden-treasure-modal"
