@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Lannar Dean">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poseidon's Paradise - Adventure Awaits</title>
     <link rel="stylesheet" href="css/common.css" />
@@ -24,7 +25,7 @@
   <body>
     <!-- the header includes the main logo, title, and navbar links for the site -->
     <header>
-      <div class="logo-container">
+      <div class="logo-container container">
         <img src="images/logo.svg" alt="Logo" class="logo" />
         <span class="park-name">Poseidon's Paradise</span>
       </div>
@@ -62,9 +63,7 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a class="btn price modal-toggle" data-target="#family-pass-modal"
-              >$150</a
-            >
+            <a class="btn price modal-toggle" data-target="#family-pass-modal">$350</a>
           </div>
           <div class="package">
             <!-- image generated using Midjourney AI discord bot.
@@ -76,11 +75,7 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a
-              class="btn price modal-toggle"
-              data-target="#individual-pass-modal"
-              >$60</a
-            >
+            <a class="btn price modal-toggle" data-target="#individual-pass-modal">$60</a>
           </div>
           <div class="package">
             <!-- image generated using Midjourney AI discord bot.
@@ -92,8 +87,7 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a class="btn price modal-toggle" data-target="#sightseeing-modal"
-              >$45</a
+            <a class="btn price modal-toggle" data-target="#sightseeing-modal">$45</a
             >
           </div>
           <div class="package">
@@ -108,17 +102,15 @@
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <span class="starting_at">starting at</span>
-            <a class="btn price modal-toggle" data-target="#aquaduct-modal"
-              >$25</a
-            >
+            <a class="btn price modal-toggle" data-target="#aquaduct-modal">$25</a>
           </div>
         </div>
       </section>
       <section id="offers">
         <h1>Special Offers</h1>
-        <p>Experience the ultimate underwater odyssey.</p>
+        <p>Act now on these hot deals to save on your underwater experience.</p>
         <div class="row offer grid grid-3 grid-sm-1">
-          <div class="grid-span-2">
+          <article class="grid-span-2">
             <h2>Discounted Meal &amp; Admission Packages</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -128,18 +120,16 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
 
-            <a href="" class="btn price margin-auto mt-5">More Info</a>
-          </div>
-          <div>
-            <div class="overlay-img">
-              <!-- image generated using Midjourney AI discord bot.
-                         Prompt: a family eating a meal together at a picnic table inside a glass dome that is underwater -->
-              <img
-                src="images/family-eating-meal.png"
-                alt="family eating a meal underwater" />
-              <span class="overlay">Save big!</span>
-            </div>
-          </div>
+            <a data-target="#meal-deal-modal" class="btn price margin-auto mt-5 modal-toggle">More Info</a>
+          </article>
+          <aside class="overlay-img">
+            <!-- image generated using Midjourney AI discord bot.
+                        Prompt: a family eating a meal together at a picnic table inside a glass dome that is underwater -->
+            <img
+              src="images/family-eating-meal.png"
+              alt="family eating a meal underwater" />
+            <span class="overlay">Save big!</span>
+          </aside>
         </div>
 
         <div class="trident-divider">
@@ -149,15 +139,13 @@
         </div>
 
         <div class="row offer grid grid-3 grid-sm-1">
-          <div class="">
-            <div class="overlay-img">
-              <!-- image generated using Midjourney AI discord bot.
-                           Prompt: a view from below a group of hammerhead sharks, looking up from within a glass tunnel, surrounded by beautiful fish -->
-              <img src="images/sharks.png" alt="sharks circling" />
-              <span class="overlay">25% off <sup>*</sup></span>
-            </div>
-          </div>
-          <div class="grid-span-2">
+          <aside class="overlay-img">
+            <!-- image generated using Midjourney AI discord bot.
+                        Prompt: a view from below a group of hammerhead sharks, looking up from within a glass tunnel, surrounded by beautiful fish -->
+            <img src="images/sharks.png" alt="sharks circling" />
+            <span class="overlay">25% off <sup>*</sup></span>
+          </aside>
+          <article class="grid-span-2">
             <h2>Shark Exhibit 25% off</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -167,8 +155,8 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
 
-            <a href="" class="btn price margin-auto mt-5">More Info</a>
-          </div>
+            <a class="btn price margin-auto mt-5 modal-toggle" data-target="#shark-exhibit-modal">More Info</a>
+          </article>
         </div>
 
         <div class="trident-divider flipped">
@@ -178,7 +166,7 @@
         </div>
 
         <div class="row offer grid grid-3 grid-sm-1">
-          <div class="grid-span-2">
+          <article class="grid-span-2">
             <h2>Buy One Get One Free Aquaduct Tickets</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -188,16 +176,14 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
 
-            <a href="" class="btn price margin-auto mt-5">More Info</a>
-          </div>
-          <div>
-            <div class="overlay-img">
-              <!-- image generated using Midjourney AI discord bot.
-                        Prompt: an underwater theme park with rides, mermaids, and exotic underwater fish -->
-              <img src="images/walkway.png" alt="underwater walkway" />
-              <span class="overlay">B.O.G.O. <sup>*</sup></span>
-            </div>
-          </div>
+            <a class="btn price margin-auto mt-5 modal-toggle" data-target="#bogo-modal">More Info</a>
+          </article>
+          <aside class="overlay-img">
+            <!-- image generated using Midjourney AI discord bot.
+                      Prompt: an underwater theme park with rides, mermaids, and exotic underwater fish -->
+            <img src="images/walkway.png" alt="underwater walkway" />
+            <span class="overlay">B.O.G.O. <sup>*</sup></span>
+          </aside>
         </div>
       </section>
     </main>
@@ -231,58 +217,248 @@
       <p>&copy; 2023 Group-57. All rights reserved.</p>
     </footer>
 
+    <!-- include the modal windows for the content shown when clicking on a package button -->
     <div class="modal" id="family-pass-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <a class="close-btn modal-toggle" data-target="#family-pass-modal"
-        >Close</a
-      >
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <div class="modal-close"></div>
+        <h2 class="w-100 center-align">Family Packages</h2>
+        <div class="grid grid-3">
+          <div class="grid-span-2">
+            <span class="modal-info">
+              When purchasing a family package, you will recieve the following perks:
+            </span>
+            <ul>
+              <li>Complementary parking</li>
+              <li>One family photo printout in souvenir frame</li>
+            </ul>
+            <span class="modal-info">
+              Each family member will receive the following:
+            </span>
+            <ul>
+              <li>Admission pass</li>
+              <li>Lunch pass</li>
+              <li>Poseidon mug, refillable at any hydration station throughout the park</li>
+            </ul>
+          </div>
+          <div>
+            <img src="images/family-fun.png" alt="Family Pass tickets" />
+          </div>
+        </div>
+        
+      
+        
+        <form class="purchaseForm" onsubmit="return purchaseComplete()">
+          <div class="grid grid-3 grid-sm-1">
+            <label for="family-package-select">Select Package:</label>
+            <select name="package" id="family-package-select">
+                <option value="family-pass-1">Family Pass for 4 ($350)</option>
+                <option value="family-pass-2">Family Pass for 5 ($400)</option>
+                <option value="family-pass-2">Family Pass for 6 ($450)</option>
+                <option value="family-pass-2">Family Pass for 7 ($500)</option>
+                <option value="family-pass-2">Family Pass for 8 ($550)</option>
+            </select>
+            <span></span>
+
+            <label for="first_name">First Name:</label>
+            <div class="grid grid-3">
+              <input type="text" id="first_name" name="first_name" required>
+              <label for="last_name">Last Name:</label>
+              <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <span></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span></span>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <span></span>
+
+            <label for="address1">Address:</label>
+            <input type="text" id="address1" name="address1" required>
+            <span></span>
+
+            <label for="address2">Apt/Suite/Unit:</label>
+            <input type="text" id="address2" name="address2" required>
+            <span></span>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <span></span>
+
+            <label for="state">State:</label>
+            <div class="grid grid-3">
+              <input type="text" size="5" id="state" name="state" required>
+              <label for="zip">Zip:</label>
+              <input type="text" size="5" id="zip" name="zip" required>
+            </div>
+            <span></span>
+
+            <input type="submit" value="Complete Purchase" class="grid-span-3 btn margin-auto">
+          </div>
+        </form>
+        <a class="close-btn modal-toggle" data-target="#family-pass-modal">Close</a>
+      </div>
     </div>
 
     <div class="modal" id="individual-pass-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <a class="close-btn modal-toggle" data-target="#individual-pass-modal"
-        >Close</a
-      >
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Individual Passes</h2>
+        <div class="grid grid-3">
+          <div class="grid-span-2">
+            <span class="modal-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+              gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+              imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+              at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+              odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+              gravida neque, ac aliquam lectus nunc at ipsum.
+            </span>
+          </div>
+          <div>
+            <img src="images/pond.png" alt="an image of an underwater pond" />
+          </div>
+        </div>
+        <a class="close-btn modal-toggle" data-target="#individual-pass-modal">Close</a>
+      </div>
     </div>
 
     <div class="modal" id="sightseeing-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <a class="close-btn modal-toggle" data-target="#sightseeing-modal"
-        >Close</a
-      >
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Sightseeing Passes</h2>
+        <div class="grid grid-3">
+          <div class="grid-span-2">
+            <span class="modal-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+              gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+              imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+              at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+              odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+              gravida neque, ac aliquam lectus nunc at ipsum.
+            </span>
+            <a class="close-btn modal-toggle" data-target="#sightseeing-modal">Close</a>
+          </div>
+          <div>
+            <img src="images/sightseeing.png" alt="Underwater Tours" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="modal" id="aquaduct-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <a class="close-btn modal-toggle" data-target="#aquaduct-modal">Close</a>
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Aquaduct Only Passes</h2>
+        <div class="grid grid-3">
+          <div class="grid-span-2">
+            <span class="modal-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+              gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+              imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+              at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+              odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+              gravida neque, ac aliquam lectus nunc at ipsum.
+            </span>
+          </div>
+          <div>
+            <img src="images/tunnel.png" alt="Underwater Tours" />
+          </div>
+        </div>
+        <a class="btn mt-5 center-align modal-toggle" data-target="#aquaduct-modal">Close</a>
+        <a class="close-btn modal-toggle" data-target="#aquaduct-modal">Close</a>
+      </div>
     </div>
+
+    <div class="modal" id="meal-deal-modal">
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Discounted Meal &amp; Admission Packages</h2>
+        <div class="grid grid-2">
+          <div>
+            <span class="modal-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+              gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+              imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+              at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+              odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+              gravida neque, ac aliquam lectus nunc at ipsum.
+            </span>
+            <a class="btn mt-5 center-align modal-toggle" data-target="#meal-deal-modal">Close</a>
+            <a class="close-btn modal-toggle" data-target="#meal-deal-modal">Close</a>
+          </div>
+          <div>
+            <img src="images/family-eating-meal.png" alt="Family eating an underwater meal" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="shark-exhibit-modal">
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">25% off tickets to the Shark Exhibit</h2>
+        <div class="grid grid-2">
+          <div>
+            <span class="modal-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+              gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+              imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+              at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+              odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+              gravida neque, ac aliquam lectus nunc at ipsum.
+            </span>
+            <a class="btn mt-5 center-align modal-toggle" data-target="#shark-exhibit-modal">Close</a>
+            <a class="close-btn modal-toggle" data-target="#shark-exhibit-modal">Close</a>
+          </div>
+          <div>
+            <img src="images/sharks.png" alt="sharks circling" />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="modal" id="bogo-modal">
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Buy One, Get One Free Aquaduct Tickets</h2>
+        <div class="grid grid-2">
+          <div>
+            <span class="modal-info">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+              gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+              imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+              at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+              odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+              gravida neque, ac aliquam lectus nunc at ipsum.
+            </span>
+            <a class="btn mt-5 center-align modal-toggle" data-target="#bogo-modal">Close</a>
+            <a class="close-btn modal-toggle" data-target="#bogo-modal">Close</a>
+          </div>
+          <div>
+            <img src="images/walkway.png" alt="underwater walkway" />
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

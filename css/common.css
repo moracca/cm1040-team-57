@@ -46,17 +46,24 @@ body {
 main {
   /* allow content to grow to take up available space. */
   flex: 1;
+  /* leave enough margin for the header, which is fixed in place */
+  margin-top: 140px;
 }
 
 header {
-  background-color: rgb(11, 92, 89, 0.5);
+  background-color: rgb(5 46 103);
   color: white;
-  padding: 20px 0;
+  padding: 10px 0 0;
+  z-index: 1;
+  /* fix the top header in place so it is always visible on screen */
+  position: fixed;
+  width: 100%;
 }
 
 nav ul {
   list-style-type: none;
   text-align: center;
+  margin: 0px;
 }
 
 nav ul li {
@@ -71,6 +78,7 @@ nav ul li a {
   font-size: 28px;
   position: relative;
   padding-bottom: 10px;
+  vertical-align: middle;
 }
 
 /* Add an underline effect to the nav links, which is normally hidden (with
@@ -100,11 +108,24 @@ nav ul li a:hover::after {
   -moz-transform: scaleX(1);
   transform: scaleX(1);
 }
-nav ul li:not(:last-of-type) {
-  border-right: 1px solid #fff;
-  padding-right: 25px;
-}
 
+/* target all nav li except the last and add a pillar icon after it to divide the
+   nav links */
+nav ul li::after {
+  content: "";
+  height: 50px;
+  width: 30px;
+  /* pillar icon from https://thehungryjpeg.com/product/3905941-ancient-classic-pillars-greek-and-roman-architecture-pillars-histori */
+  background-image: url(/images/pillar.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+nav ul li:last-of-type::after {
+  background: none;
+}
 @media (max-width: 992px) {
   nav ul li a {
     font-size: 20px;
@@ -114,6 +135,10 @@ nav ul li:not(:last-of-type) {
     width: 100%;
     height: 30px;
     border: none !important;
+  }
+
+  nav ul li::after {
+    background: none;
   }
 }
 
@@ -254,6 +279,9 @@ span.star::before {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -262,7 +290,7 @@ span.star::before {
 }
 
 .park-name {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 600;
   color: #fff;
 }
@@ -273,9 +301,13 @@ span.star::before {
   position: relative;
   display: inline-block;
 }
+.row > .overlay-img {
+  padding: 0px;
+}
 /* This span containing the overlaid text, absolutely positioned to the bottom
    of the container */
-span.overlay {
+span.overlay,
+figcaption.overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -307,7 +339,7 @@ span.overlay {
 
 .btn-medium {
   height: 28px;
-  font-size: 16px;
+  font-size: 26px;
   line-height: 28px;
 }
 
@@ -336,6 +368,24 @@ span.overlay {
   border-radius: 6px;
 }
 
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 5px;
+}
+input[type="submit"] {
+  border: none;
+}
+
+#registrationForm label {
+  text-align: right;
+  line-height: 40px;
+}
 /* These styles are rougly taken from Bootstrap v5, but are modified to make
    the container a bit wider than bootstrap normally uses */
 .container,
@@ -532,11 +582,43 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   text-rendering: auto;
 }
 
+
 /* modal CSS */
 
+.modal-info {
+  color: #fff;
+}
+
 .modal {
-  /* initially the modal element is hidden, but the show class is added on button click */
-  visibility: hidden;
+  /* initially the modal element is hidden, but the show JS class is added on button click */
+  display: none;
+}
+/* make the backdrop visible when it has the "show" class */
+.modal.show {
+  display: unset;
+}
+/* make the background opaque when modal is opened */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  opacity: 0;
+  backdrop-filter: blur(0px); /* blur will be added when container has show class */
+  transition: backdrop-filter 2s ease-in-out, opacity 2s ease-in-out !important; /* gradually blur backdrop */
+  z-index: 10; /* Ensure it's above other content */
+}
+.modal.show .modal-backdrop {
+  backdrop-filter: blur(10px); /* Blurs the content behind the backdrop */
+  opacity: 1;
+}
+
+/* The modal content */
+.modal-content {
+  /* set to z-index to a higher value so it covers all the other elements */
+  z-index: 20;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -552,37 +634,24 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   padding: 20px;
   border-radius: 6px;
   width: 50%;
-  height: 50%;
-  background: #0ce7ff;
-  z-index: 20;
+  min-height: 20%;
+  max-height: 90%;
+  background: rgba(5, 49, 107, 0.7);
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-/* make the background opaque when modal is opened */
-.modal::after {
-  position: fixed;
-  content: "";
-  /* set top and left properties to -50% in order to cover the whole screen */
-  top: -50%;
-  left: -50%;
-  /* make the element have the whole screen's width and height */
-  width: 100vw;
-  height: 100vh;
-  /* set the opacity */
-  background: rgba(0, 0, 0, 0.5);
-  /* set the z index to a negative value in order to be behind the modal */
-  z-index: -2;
-}
-
-.show {
-  visibility: visible;
-}
-
-.modal-info {
-  color: #fff;
-}
-
 .close-btn {
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.close-btn:hover {
+  text-decoration: underline;
 }
 
 /* change the styling if the screen is smaller than 768px */
@@ -594,4 +663,48 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   .close-btn {
     font-size: 15px;
   }
+}
+
+/* Olympus font obtained from https://www.fontspace.com/olympus-font-f11234
+   and converted to woff format using https://transfonter.org/ */
+@font-face {
+  font-family: "Olympus";
+  src: url("/fonts/Olympus.woff2") format("woff2"),
+    url("/fonts/Olympus.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Olympus";
+  src: url("/fonts/OlympusBold.woff2") format("woff2"),
+    url("/fonts/OlympusBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+.btn,
+.overlay,
+.park-name {
+  font-family: "Olympus";
+  font-weight: normal;
+  font-style: normal;
+}
+
+a.btn.price {
+  font-family: "Quicksand", sans-serif;
+}
+
+.center-align {
+  text-align: center;
 }

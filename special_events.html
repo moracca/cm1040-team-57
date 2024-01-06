@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Hamna Qureshi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Underwater Music Festival</title>
     <link rel="stylesheet" href="css/common.css" />
@@ -19,7 +20,7 @@
 
   <body>
     <header>
-      <div class="logo-container">
+      <div class="logo-container container">
         <img src="images/logo.svg" alt="Logo" class="logo" />
         <span class="park-name">Poseidon's Paradise</span>
       </div>
@@ -61,7 +62,7 @@
           Location: Poseidon's Paradise
         </p>
 
-        <ul>
+        <ul class="feature-list">
           <li>
             Synchronized Fireworks Choreography: Experience a mesmerizing
             display as the fireworks are expertly synchronized with music and
@@ -69,7 +70,6 @@
             of vibrant explosions and the serene underwater setting offers a
             truly unforgettable experience.
           </li>
-          <br />
           <li>
             Underwater Acrobatics: Marvel at the extraordinary skills of
             talented underwater acrobats who perform graceful maneuvers amidst
@@ -77,7 +77,6 @@
             water, adding an additional level of artistry and excitement to the
             event.
           </li>
-          <br />
           <li>
             Marine Life Interaction: The Underwater Fireworks Spectacular
             provides a unique opportunity to witness the marine life of
@@ -86,14 +85,12 @@
             turtles, and other fascinating aquatic creatures, creating a magical
             atmosphere.
           </li>
-          <br />
           <li>
             Spectator Viewing Areas: Secure your spot at one of the designated
             spectator viewing areas strategically located around the underwater
             arena. These areas offer optimal vantage points to fully appreciate
             the fireworks display and the accompanying performances.
           </li>
-          <br />
           <li>
             Photography Opportunities: Capture the magical moments of the
             Underwater Fireworks Spectacular with your camera. Whether you're a
@@ -101,7 +98,6 @@
             shots, this event offers fantastic photo opportunities that will
             impress your friends and family.
           </li>
-          <br />
           <li>
             Interactive Light Show: Along with the fireworks, an interactive
             light show enhances the ambiance of the event. Underwater LED lights
@@ -109,14 +105,13 @@
             movements, creating a dynamic and captivating underwater
             environment.
           </li>
-          <br />
         </ul>
       </section>
 
       <section>
         <h2>Registration</h2>
         <p>Secure your spot now for Underwater Santa's Magical Village!</p>
-        <button onclick="openRegistrationPage()">Register Now</button>
+        <a href="registration.html" class="btn margin-auto">Register Now</a>
       </section>
     </main>
 
@@ -150,10 +145,5 @@
       <p>&copy; 2023 Group-57. All rights reserved.</p>
     </footer>
 
-    <script>
-      function openRegistrationPage() {
-        window.location.href = "registration.html";
-      }
-    </script>
   </body>
 </html>

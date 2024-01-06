@@ -1,9 +1,10 @@
-/* make all elements with class col that are found in the rides element to have display flex and align text and button to start */
+/* make all elements with class ride to have display flex and align text and button to start */
 .ride {
   display: flex;
   flex-wrap: wrap;
-  /* the direction in which the elements inside the flex container are stacked */
+  /* the direction in which the elements inside the flex container are arranged is column */
   flex-direction: column;
+  /* equally space all the elements inside the flex container */
   justify-content: space-between;
   align-items: flex-start;
   text-align: start;
@@ -11,33 +12,33 @@
   height: 100%;
 }
 
+/* title of the ride has 5px margin for top and bottom and 0 on the sides */
 .ride-title {
-  /* title of the ride has 5px margin for top and bottom and 0 on the sides */
   margin: 5px 0;
 }
 
+/* set description margins to 10px for bottom and 0 for the rest for better visibility */
 .ride-description {
-  /* set description margins to 10px for bottom and 0 for the rest for better visibility */
   margin: 0 0 10px 0;
 }
 
-/* specify btn-medium is a block element so text can be alligned in the center */
+/* all elements with class btn-medium found inside element with id=rides  */
 #rides .btn-medium {
+  /* make btn-medium a block element so text can be alligned in the center */
   display: block;
   text-align: center;
 }
 
-/* lower the brightness of the images and set transition to 1 second */
+/* set transition to 0.3 seconds */
 #rides img {
   transition-duration: 0.3s;
 }
 
-/* when hovering over an image brightness will go to 100% and image will be bigger in 1 second */
+/* make image brighter and larger on hover */
 #rides .ride:hover img {
   filter: brightness(1.25);
   transform: scale(1.03);
 }
-
 
 /* change the styling if the screen is smaller than 768px */
 @media (max-width: 768px) {

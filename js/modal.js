@@ -10,17 +10,10 @@ function hideAllModals() {
 
 $(function() {
     // add a callback to close the modal when the user clicks outside the modal
-    // on the opaque background.  Add the callback to the .modal element, since
-    // we can't add a click callback directly to the ::after pseudo element since
-    // it is not part of the DOM.
-    $(".modal").click(function(e) {
-        // check if the click was outside the boundary of the modal div.
-        // See https://stackoverflow.com/a/23243996/11644659
-        if (e.offsetX < 0 || e.offsetX > this.offsetWidth || e.offsetY < 0 || e.offsetY > this.offsetHeight) {
-            // close all modals
-            hideAllModals();
-        }
-    });
+    // on the opaque backdrop. 
+    $(".modal-backdrop").click(function(e){
+        hideAllModals();
+    })
 
     // add a callback to modal-toggle links to close its target modal, specified
     // in the data-target attribute
