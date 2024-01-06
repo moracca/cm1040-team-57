@@ -301,6 +301,9 @@ span.star::before {
   position: relative;
   display: inline-block;
 }
+.row > .overlay-img {
+  padding: 0px;
+}
 /* This span containing the overlaid text, absolutely positioned to the bottom
    of the container */
 span.overlay,
