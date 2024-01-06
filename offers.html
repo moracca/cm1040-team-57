@@ -226,77 +226,37 @@
       <p>&copy; 2023 Group-57. All rights reserved.</p>
     </footer>
 
-    <div class="modal purchase-modal" id="family-pass-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <div class="grid grid-5 w-100 center-align">
-        <div>
-          <h3>Family Pass for 4</h3>
-          <h4>$350</h4>
+    <!-- include the modal windows for the content shown when clicking on a package button -->
+    <div class="modal" id="family-pass-modal">
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <div class="modal-close"></div>
+        <h2 class="w-100 center-align">Family Packages</h2>
+        <span class="modal-info">
+          When purchasing a family package, you will recieve the following perks:
           <ul>
-            <li>Admission for 4 people</li>
-            <li>Lunch pass for 4 people</li>
-            <li>One family photo printout</li>
             <li>Complementary parking</li>
-            <li>4 refillable Poseidon mugs</li>
+            <li>One family photo printout in souvenir frame</li>
           </ul>
-        </div>
-        <div>
-          <h3>Family Pass for 5</h3>
+          Each family member will receive the following:
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Admission pass</li>
+            <li>Lunch pass</li>
+            <li>Poseidon mug, refillable at any hydration station throughout the park</li>
           </ul>
-        </div>
-        <div>
-          <h3>Family Pass for 6</h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Family Pass for 7</h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Family Pass for 8</h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-      </div>
-      <form class="purchaseForm" onsubmit="return purchaseComplete()">
-        <div class="grid grid-3 grid-sm-1">
+        </span>
+        
+        <form class="purchaseForm" onsubmit="return purchaseComplete()">
+          <div class="grid grid-3 grid-sm-1">
             <label for="family-package-select">Select Package:</label>
             <select name="package" id="family-package-select">
                 <option value="family-pass-1">Family Pass for 4 ($350)</option>
-                <option value="family-pass-2">Family Pass for 5</option>
-                <option value="family-pass-2">Family Pass for 6</option>
-                <option value="family-pass-2">Family Pass for 7</option>
-                <option value="family-pass-2">Family Pass for 8</option>
+                <option value="family-pass-2">Family Pass for 5 ($400)</option>
+                <option value="family-pass-2">Family Pass for 6 ($450)</option>
+                <option value="family-pass-2">Family Pass for 7 ($500)</option>
+                <option value="family-pass-2">Family Pass for 8 ($550)</option>
             </select>
             <span></span>
 
@@ -336,53 +296,65 @@
             </div>
             <span></span>
 
-            <input type="submit" value="Register" class="grid-span-3 btn margin-auto">
-            
-        </div>
-      </form>
-      <a class="close-btn modal-toggle" data-target="#family-pass-modal"
-        >Close</a
-      >
+            <input type="submit" value="Complete Purchase" class="grid-span-3 btn margin-auto">
+          </div>
+        </form>
+        <a class="close-btn modal-toggle" data-target="#family-pass-modal">Close</a>
+      </div>
     </div>
 
     <div class="modal" id="individual-pass-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <a class="close-btn modal-toggle" data-target="#individual-pass-modal"
-        >Close</a
-      >
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Individual Passes</h2>
+        <span class="modal-info">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+          gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+          imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+          at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+          odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+          gravida neque, ac aliquam lectus nunc at ipsum.
+        </span>
+        <a class="close-btn modal-toggle" data-target="#individual-pass-modal">Close</a>
+      </div>
     </div>
 
     <div class="modal" id="sightseeing-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <a class="close-btn modal-toggle" data-target="#sightseeing-modal"
-        >Close</a
-      >
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Sightseeing Passes</h2>
+        <span class="modal-info">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+          gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+          imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+          at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+          odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+          gravida neque, ac aliquam lectus nunc at ipsum.
+        </span>
+        <a class="close-btn modal-toggle" data-target="#sightseeing-modal">Close</a>
+      </div>
     </div>
 
     <div class="modal" id="aquaduct-modal">
-      <span class="modal-info"
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
-        gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
-        imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
-        at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
-        odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
-        gravida neque, ac aliquam lectus nunc at ipsum.
-      </span>
-      <a class="close-btn modal-toggle" data-target="#aquaduct-modal">Close</a>
+      <!-- Modal Backdrop -->
+      <div class="modal-backdrop"></div>
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <h2 class="w-100 center-align">Aquaduct Only Passes</h2>
+        <span class="modal-info">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas
+          gravida mi in molestie. Praesent et mi mauris. In semper fermentum dui
+          imperdiet consectetur. Duis in pharetra neque. Nullam ullamcorper erat
+          at nibh venenatis placerat. Fusce pulvinar vehicula eros, quis fringilla
+          odio semper vel. Integer sagittis, mi nec imperdiet interdum, libero dui
+          gravida neque, ac aliquam lectus nunc at ipsum.
+        </span>
+        <a class="close-btn modal-toggle" data-target="#aquaduct-modal">Close</a>
+      </div>
     </div>
   </body>
 </html>
