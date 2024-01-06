@@ -615,7 +615,7 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   /* make the element have the whole screen's width and height */
   width: 100vw;
   height: 200vh;
-  /* set the opacity */
+  /* set the opacity for the whole screen when modal is opened */
   background: rgba(0, 0, 0, 0.5);
   /* set the z index to a negative value in order to be behind the modal */
   z-index: -2;
