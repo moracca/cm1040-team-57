@@ -27,25 +27,25 @@
 <body>
     <header>
         <div class="logo-container container">
-            <img src="images/logo.svg" alt="Logo" class="logo" />
-            <span class="park-name">Poseidon's Paradise</span>
+          <img src="images/logo.svg" alt="Logo" class="logo" />
+          <span class="park-name">Poseidon's Paradise</span>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="offers.html">Prices &amp; Offers</a></li>
-                <li><a href="rides.html">Explore the Rides</a></li>
-                <li class="dropdown">
-                    <a href="events.html" class="dropbtn">Events and Shows</a>
-                    <div class="dropdown-content">
-                        <a href="#">Concerts</a>
-                        <a href="#">Holiday Events</a>
-                        <a href="#">Special Events</a>
-                    </div>
-                </li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="offers.html">Prices &amp; Offers</a></li>
+            <li><a href="rides.html">Explore the Rides</a></li>
+            <li class="dropdown">
+              <a href="events.html" class="dropbtn">Events and Shows</a>
+              <div class="dropdown-content">
+                <a href="concerts.html">Concerts</a>
+                <a href="holiday_events.html">Holiday Events</a>
+                <a href="special_events.html">Special Events</a>
+              </div>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <main class="container">
         <section id="packages" class="row">
@@ -133,7 +133,6 @@
             return false;
         }
         function selectEvent(event) {
-            console.log('#event option[value="' + event + '"]')
             $('#event option[value="' + event + '"]').prop('selected', true);
         }
     </script>
