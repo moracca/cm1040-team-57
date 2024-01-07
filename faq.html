@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Lannar Dean">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poseidon's Paradise - Adventure Awaits</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/brands.css" />
+
+
+    <!-- Load Quicksand font https://fonts.google.com/specimen/Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+    <script src="/js/modal.js"></script>
+  </head>
+  <body>
+    <!-- the header includes the main logo, title, and navbar links for the site -->
+    <header>
+      <div class="logo-container container">
+        <img src="images/logo.svg" alt="Logo" class="logo" />
+        <span class="park-name">Poseidon's Paradise</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="offers.html">Prices &amp; Offers</a></li>
+          <li><a href="rides.html">Explore the Rides</a></li>
+          <li class="dropdown">
+            <a href="events.html" class="dropbtn">Events and Shows</a>
+            <div class="dropdown-content">
+              <a href="concerts.html">Concerts</a>
+              <a href="holiday_events.html">Holiday Events</a>
+              <a href="special_events.html">Special Events</a>
+            </div>
+          </li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+        <section>
+            <article>
+                <h1>FAQ</h1>
+                <p>
+                    Please see the answers to the following commonly asked questions.
+                    If you do not see the answer to your question, please reach out
+                    to our customer service line at <a href="tel:1-800-poseidon">1-800-poseidon</a>
+                </p>
+
+                <ul class="faq">
+                    <li class="question">What are the park's operating hours?</li>
+                    <li class="answer">Poseidon's Paradise is open from 10 AM to 8 PM daily.</li>
+                    <li class="question">Are there any age or height restrictions for the rides?</li>
+                    <li class="answer">Yes, certain rides have age and height restrictions for safety.
+                        Please check our website or inquire at the entrance for specific details.</li>
+                    <li class="question">Can I buy tickets online?</li>
+                    <li class="answer">Absolutely! Tickets can be purchased on our website. We recommend buying tickets in advance to ensure availability.</li>
+                    <li class="question"> Is parking available at the park?</li>
+                    <li class="answer">Yes, we have ample parking available, including spots for RVs and buses.</li>
+                    <li class="question">Are there facilities for visitors with disabilities?</li>
+                    <li class="answer">Yes, the park is equipped with accessible paths, rides, and restrooms for visitors with disabilities.</li>
+                    <li class="question">Can I bring my own food and drinks?</li>
+                    <li class="answer">Outside food and drinks are not permitted, but we have a variety of dining options available inside the park.</li>
+                    <li class="question">Is there a dress code for the park?</li>
+                    <li class="answer">We recommend swimwear for the water rides. Please avoid clothing with hard or sharp objects like buckles or studs.</li>
+                    <li class="question">Are lockers available for rent?</li>
+                    <li class="answer">Yes, we offer lockers of various sizes for rent near the main entrance.</li>
+                    <li class="question">Is there a first aid station in the park?</li>
+                    <li class="answer">Yes, we have a fully equipped first aid station with trained medical staff on site.</li>
+                    <li class="question">Are pets allowed in the park?</li>
+                    <li class="answer">Pets are not allowed, with the exception of service animals.</li>
+                    <li class="question">Do you offer any group discounts?</li>
+                    <li class="answer">Yes, we offer discounts for groups of 15 or more. Please contact our group sales department for more information.</li>
+                    <li class="question">Can I re-enter the park if I leave?</li>
+                    <li class="answer">Yes, re-entry is allowed. Just keep your ticket stub and get a hand stamp at the exit.</li>
+                    <li class="question">What is your policy on inclement weather?</li>
+                    <li class="answer">For safety, certain rides may close during severe weather. We do not offer refunds due to weather, but tickets may be rescheduled.</li>
+                    <li class="question">Do you have baby-changing and nursing facilities?</li>
+                    <li class="answer">Yes, we have dedicated baby-changing and nursing facilities throughout the park.</li>
+                    <li class="question">Are there any hotels or accommodations nearby?</li>
+                    <li class="answer">Yes, there are several hotels in the vicinity, ranging from budget to luxury options. Check our website for partnered hotels offering special rates for park visitors.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+  </body>
+  <script>
+    $(".question").click(function(){
+        $(this).toggleClass('active')
+    })
+  </script>
+</html>

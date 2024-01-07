@@ -336,6 +336,10 @@ figcaption.overlay {
   width: 100%;
   max-width: 100%;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .btn-medium {
   height: 28px;
@@ -380,6 +384,15 @@ input[type="email"] {
 }
 input[type="submit"] {
   border: none;
+}
+
+#events img {
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+#events img:hover {
+  transform: scale(1.05);
 }
 
 #registrationForm label {
@@ -685,6 +698,12 @@ grid-span-* classes (e.g. grid-span-2 will span 2 columns.
   font-display: swap;
 }
 
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 32px;
+}
 h1,
 h2,
 h3,
@@ -701,10 +720,65 @@ button,
   font-style: normal;
 }
 
+a {
+  color: #FFF;
+}
+
 a.btn.price {
   font-family: "Quicksand", sans-serif;
 }
 
 .center-align {
   text-align: center;
+}
+
+
+input[type="number"] {
+  width: 100%; /* Full width of container */
+  padding: 10px 30px 10px 15px; /* leave room for spinners in right padding */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+}
+
+/* hide the browser's default spinner buttons so we can replace them with our own */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* limit the width of the number input container */
+.number-input-container {
+  position: relative;
+  width: 70px;
+}
+
+/* The custom spinner buttos we use to add/subtract from the input's value */
+.spinner-button {
+  color: #FFF;
+  border: 1px solid #000;
+  position: absolute;
+  right: 0px;
+  width: 22px;
+  height: 22px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none; /* prevent user from selecting this text by accident */
+  font-size: 26px;
+  border-radius: 5px;
+  background-color: #052e679e;
+}
+.spinner-button:hover {
+  background-color: #264b7e;
+}
+.spinner-button.up {
+  top: 0px;
+  border-radius: 0px 5px 0px 0px; /* round the upper right corner */
+}
+.spinner-button.down {
+  bottom: 0px;
+  border-radius: 0px 0px 5px 0px; /* round the lower right corner */
 }
