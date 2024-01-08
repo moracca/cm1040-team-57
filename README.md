@@ -7,4 +7,6 @@ Members:
 - ANA-MARIA FOTACHE-VORNICU (Explore the Rides page)
 - YASHAR JANPARVAR JAVDANI (Home page)
 - HAMNA QURESHI (Events and Shows page)
-- BONNO TSAATSELA (M.I.A.)
+- BONNO TSAATSELA (unreachable)
+
+Site URL: https://hub.labs.coursera.org/connect/shareddmexqwgu?forceRefresh=false&path=%2F&isLabVersioning=true
